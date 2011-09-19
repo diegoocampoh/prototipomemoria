@@ -5,11 +5,14 @@
 
 package memoria.dataAccess;
 
+import memoria.dataAccess.dao.ExcelDao;
 import memoria.commons.dataAccess.query.QueryParams;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import memoria.commons.dataAccess.query.VisualQuery;
 import memoria.commons.entities.Escuela;
+import memoria.commons.structures.GeoReferenced;
 
 /**
  *
@@ -27,8 +30,17 @@ public class RepositoriesManager {
         entitiesLocationMap.put(Escuela.class.getSimpleName(),repositoriosDeEscuela);
     }
 
-    public List<SpatialDTO> getData(List<QueryParams> params){
-        return new ExcelDao().getData(params);
+    public List<GeoReferenced> getData(VisualQuery params){
+        //Voy a buscar en que repositorios encuentro la data
+        String capa = params.getCapa();
+        List<IRepositoryDao> daos = entitiesLocationMap.get(capa);
+        List<GeoReferenced> results = new ArrayList<GeoReferenced>();
+
+        for (IRepositoryDao iRepositoryDao : daos) {
+            results.addAll(iRepositoryDao.getData(params));
+
+        }
+        return results;
     }
 
     public List<IRepositoryDao> getRepositories() {

@@ -5,9 +5,19 @@
 
 package memoria.ws;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import memoria.commons.dataAccess.query.VisualQuery;
+import memoria.commons.dataAccess.query.filtro.RectangleFilter;
+import memoria.commons.structures.GeoReferenced;
+import memoria.commons.structures.Point;
+import memoria.commons.structures.coordinates.LatLonCoordinate;
+import memoria.dataAccess.RepositoriesManager;
+import memoria.dataAccess.SpatialDTO;
 
 /**
  *
@@ -15,7 +25,6 @@ import javax.jws.WebService;
  */
 @WebService()
 public class wsTransformador {
-
 
     /**
      * Servicio que recibe la consulta en XML y retorna los resultados
@@ -27,8 +36,20 @@ public class wsTransformador {
     @WebMethod(operationName = "getData")
     public String getData(@WebParam(name = "params")
     String params) {
-        //TODO write your implementation code here:
-        return null;
+       //En este método recibo la consulta como un xml, la desarmo con XStream
+       //y la paso a objeto
+        XStream xstream = new XStream(new DomDriver());
+        try {
+            VisualQuery query = (VisualQuery) xstream.fromXML(params);
+
+            RepositoriesManager repoManager = new RepositoriesManager();
+            List<GeoReferenced> results = repoManager.getData(query);
+            return xstream.toXML(results);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     /**
@@ -51,11 +72,15 @@ public class wsTransformador {
     Double lonSurOesteVisor, @WebParam(name = "latNorEsteVisor")
     Double latNorEsteVisor, @WebParam(name = "lonNorEsteVisor")
     Double lonNorEsteVisor) {
+        Point southWest = new Point(new LatLonCoordinate(latSurOesteVisor, lonSurOesteVisor));
+        Point norEast = new Point(new LatLonCoordinate(latNorEsteVisor, lonNorEsteVisor));
+        RectangleFilter filtro = new RectangleFilter(southWest, norEast);
 
-        
+        RepositoriesManager repoManager = new RepositoriesManager();
 
-
-        return null;
+        VisualQuery consulta = new VisualQuery(capa, filtro);
+        XStream xstream = new XStream(new DomDriver());
+        return xstream.toXML(repoManager.getData(consulta));
     }
 
     
