@@ -1,0 +1,86 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAQQRAsOk3uqvy3Hwwo4CclBTrVPfEE8Ms0qPwyRfPn-DOTlpaLBTvTHRCdf2V6KbzW7PZFYLT8wFD0A" type="text/javascript"></script>
+        <script type="text/javascript">
+        //<![CDATA[
+        function load() {
+            if (GBrowserIsCompatible()) {
+                
+            
+            function Point(lat,long,html,icon) {
+                  this.gpoint = new GMarker(new GLatLng(lat,long),icon);
+                  this.html = html;
+                  
+               }               
+               
+               
+               function Map(id,points,lat,long,zoom) {
+                  this.id = id;
+                  this.points = points;
+                  this.gmap = new GMap2(document.getElementById(this.id));
+                  this.gmap.setCenter(new GLatLng(lat, long), zoom);
+                  this.markerlist = markerlist;
+                  this.addmarker = addmarker;
+                  this.array2points = array2points;
+                   
+                  function markerlist(array) {
+                     for (var i in array) {
+                        this.addmarker(array[i]);
+                     }
+                  }
+                  
+                  function array2points(map_points) {            
+                      for (var i in map_points) {  
+                        points[i] = new Point(map_points[i][0],map_points[i][1],map_points[i][2],map_points[i][3]);         }
+                      return points;   
+                    }                  
+                  
+                  function addmarker(point) {
+                     if (point.html) {
+                       GEvent.addListener(point.gpoint, "click", function() { // change click to mouseover or other mouse action
+                           point.gpoint.openInfoWindowHtml(point.html);
+                        
+                       });
+                       
+                     }
+                     this.gmap.addOverlay(point.gpoint);  
+                  }
+                  this.points = array2points(this.points);
+                  this.markerlist(this.points);
+            }  
+                     
+                var icon = new GIcon(); 
+                icon.image = "";
+                icon.shadow = "";
+                icon.iconSize = new GSize(12, 20);
+                icon.shadowSize = new GSize(22, 20);
+                icon.iconAnchor = new GPoint(6, 20);
+                icon.infoWindowAnchor = new GPoint(5, 1);
+        
+                    map_points = [[' -34.90297540976583\n', '-56.150115343145586 ', '<b>data 1</b>'], [' -34.91405283606052\n', '-56.149598599169025 ', '<b>data 1</b>'], [' -34.90249401414837\n', '-56.14313246390844 ', '<b>data 1</b>'], [' -34.91208794142181\n', '-56.1594397002549 ', '<b>data 1</b>'], [' -34.90229954627847\n', '-56.139786234136515 ', '<b>data 1</b>'], [' -34.90501248835167\n', '-56.14362696401975 ', '<b>data 1</b>'], [' -34.90151679308842\n', '-56.15860975366718 ', '<b>data 1</b>'], [' -34.90422278584857\n', '-56.15386497973252 ', '<b>data 1</b>'], [' -34.90297540976583\n', '-56.150115343145586 ', '<b>data 1</b>'], [' -34.911607048698144\n', '-56.159655552870404 ', '<b>data 1</b>'], [' -34.90746952658307\n', '-56.16336118208847 ', '<b>data 1</b>'], [' -34.90297540976583\n', '-56.150115343145586 ', '<b>data 1</b>'], [' -34.902628563127344\n', '-56.16217433495947 ', '<b>data 1</b>'], [' -34.90297540976583\n', '-56.150115343145586 ', '<b>data 1</b>'], [' -34.90297540976583\n', '-56.150115343145586 ', '<b>data 1</b>'], [' -34.90397495979139\n', '-56.1438807699584 ', '<b>data 1</b>'], [' -34.90272948813696\n', '-56.144396339348894 ', '<b>data 1</b>'], [' -34.90801904837214\n', '-56.15053057116916 ', '<b>data 1</b>'], [' -34.90297540976583\n', '-56.150115343145586 ', '<b>data 1</b>'], [' -34.908778502206594\n', '-56.14024810359701 ', '<b>data 1</b>'], [' -34.90235692798068\n', '-56.138055306021364 ', '<b>data 1</b>']];
+             var map = new Map('map',map_points,-34.8973527666,-56.1653947205,11);
+        
+
+           map.gmap.addControl(new GMapTypeControl());
+
+           map.gmap.addControl(new GSmallMapControl());
+
+
+            }
+        }
+        //]]>
+        </script>
+        
+        
+        
+  </head>
+
+  <body onload="load()" onunload="GUnload()">
+    <div align="center" id="map" style="width: 800px; height: 400px;horizontal-align:center"></div>
+  </body>
+</html>
