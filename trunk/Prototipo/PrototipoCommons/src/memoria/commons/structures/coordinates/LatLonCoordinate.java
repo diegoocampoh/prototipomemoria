@@ -11,6 +11,14 @@ package memoria.commons.structures.coordinates;
  */
 public class LatLonCoordinate extends Coordinate{
 
+    public double getLatitude(){
+        return Double.parseDouble(this.getY());
+    }
+
+     public double getLongitude(){
+        return Double.parseDouble(this.getX());
+    }
+
     public LatLonCoordinate(String latitude, String longitude) {
         this.setX(longitude);
         this.setY(latitude);
@@ -20,5 +28,21 @@ public class LatLonCoordinate extends Coordinate{
         this.setX(longitude.toString());
         this.setY(latitude.toString());
     }
+
+    @Override
+    public double to_double_x() {
+        return getLongitude();
+    }
+
+    @Override
+    public double to_double_y() {
+        return getLatitude();
+    }
+
+
+
+
+
+
 
 }

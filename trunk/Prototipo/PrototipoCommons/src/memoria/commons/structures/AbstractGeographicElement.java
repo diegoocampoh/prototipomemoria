@@ -5,16 +5,14 @@
 
 package memoria.commons.structures;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
 /**
  *
  * @author diego
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(namespace="http://geographicElement")
-public abstract class AbstractGeographicElement {
+public abstract class AbstractGeographicElement  {
+
+    public abstract List<Point> getPoints();
 
 }

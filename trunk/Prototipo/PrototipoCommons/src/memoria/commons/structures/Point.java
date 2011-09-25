@@ -5,6 +5,8 @@
 
 package memoria.commons.structures;
 
+import java.util.Arrays;
+import java.util.List;
 import memoria.commons.structures.coordinates.Coordinate;
 
 /**
@@ -32,12 +34,21 @@ public class Point extends AbstractGeographicElement{
         this.coordiante = coordinate;
     }
 
+    public Point(Coordinate coordinate) {
+        this.coordiante = coordinate;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public List<Point> getPoints() {
+        return Arrays.asList(this);
     }
 
 }

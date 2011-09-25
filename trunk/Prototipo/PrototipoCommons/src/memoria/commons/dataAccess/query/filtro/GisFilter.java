@@ -16,13 +16,8 @@ import memoria.commons.structures.GeoReferenced;
  *
  * @author diego
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(namespace="http://GisFilter")
 public abstract class GisFilter {
 
-    @XmlElement(name="test", type=String.class)
-    public String test;
-    
     public abstract List<GeoReferenced> filter(List<GeoReferenced> data);
 
 }

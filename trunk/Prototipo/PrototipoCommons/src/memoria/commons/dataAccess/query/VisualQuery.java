@@ -5,22 +5,21 @@
 
 package memoria.commons.dataAccess.query;
 
-import java.util.List;
-import memoria.commons.structures.Point;
 import memoria.commons.dataAccess.query.filtro.GisFilter;
+import memoria.commons.xml.XmlSerializable;
 
 
-public class VisualQuery {
+public class VisualQuery extends XmlSerializable{
     
-    private String capas;
+    private String capa;
     private GisFilter filtro;
 
-    public String getCapas() {
-        return capas;
+    public String getCapa() {
+        return capa;
     }
 
-    public void setCapas(String capas) {
-        this.capas = capas;
+    public void setCapa(String capa) {
+        this.capa = capa;
     }
 
     public GisFilter getFiltro() {
@@ -31,12 +30,14 @@ public class VisualQuery {
         this.filtro = filtro;
     }
 
-    public VisualQuery(String capas) {
-        this.capas = capas;
+    public VisualQuery(String capa) {
+        super();
+        this.capa = capa;
     }
 
-    public VisualQuery(String capas, GisFilter filtro) {
-        this.capas = capas;
+    public VisualQuery(String capa, GisFilter filtro) {
+        super();
+        this.capa = capa;
         this.filtro = filtro;
     }
 

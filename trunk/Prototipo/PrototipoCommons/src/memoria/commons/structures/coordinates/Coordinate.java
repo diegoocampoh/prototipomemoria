@@ -9,7 +9,7 @@ package memoria.commons.structures.coordinates;
  *
  * @author diego
  */
-public abstract class Coordinate {
+public abstract class Coordinate{
 
     private String x;
     private String y;
@@ -38,6 +38,7 @@ public abstract class Coordinate {
     public Coordinate() {
     }
 
-    
-   
+    public abstract double to_double_x();
+    public abstract double to_double_y();
+
 }
