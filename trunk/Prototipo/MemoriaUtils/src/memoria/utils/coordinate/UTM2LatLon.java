@@ -35,8 +35,8 @@ public class UTM2LatLon
       String[] utm = UTM.split(" ");
       zone = Integer.parseInt(utm[0]);
       String latZone = utm[1];
-      easting = Double.parseDouble(utm[2]);
-      northing = Double.parseDouble(utm[3]);
+      easting = Double.parseDouble(utm[2].replace(",", "."));
+      northing = Double.parseDouble(utm[3].replace(",", "."));
       String hemisphere = getHemisphere(latZone);
       double latitude = 0.0;
       double longitude = 0.0;
