@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>comisarias</name>
+	<StyleMap id="MapRollOver">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#zn</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#zh</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="zn">
+		<IconStyle>
+			<color>ffff0000</color>
+			<scale>0.6</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/police.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<BalloonStyle>
+			<text>$[description]</text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff000000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffffca95</color>
+		</PolyStyle>
+	</Style>
+	<Style id="zh">
+		<IconStyle>
+			<color>ffff0000</color>
+			<scale>0.6</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/police.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff00ffff</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Comisaria de la Mujer</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Comisaria de la Mujer</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Div. Especializada</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">0</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1918588237,-34.9069929383,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Comisaria de Menores</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Comisaria de Menores</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Div. Especializada</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">0</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1796730489,-34.9074891085,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>EX Centro de la Zona 1 (Inspeccion)</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">EX Centro de la Zona 1 (Inspeccion)</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">DIVISION I</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">0</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1533706398,-34.8946036086,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>EX Centro de la Zona 3 (Inspeccion)</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">EX Centro de la Zona 3 (Inspeccion)</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">DIVISION II</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">0</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2036160642,-34.8255182169,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Policia de Transito</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Policia de Transito</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Grupos de Apoyo</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">0</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1540180866,-34.8646690642,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 1</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 1</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2108833929,-34.9076176299,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 10</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 10</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">DE LA COSTA</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1501383437,-34.9070689408,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 11</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 11</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">DE LA COSTA</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.111512695,-34.893772052,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 12 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 12 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">NORTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1968320543,-34.8546372897,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 13 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 13 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">CENTRAL</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.17147500160001,-34.8695923103,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 14 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 14 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">DE LA COSTA</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.0898580644,-34.8831542255,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 15</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 15</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">CENTRAL</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1412284298,-34.8755829838,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 16 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 16 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">ESTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.14377341500001,-34.8507433845,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 17</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 17</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">NORTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1640550544,-34.7951566961,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 18</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 18</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">ESTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.0857163432,-34.8000649101,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 19 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 19 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">RIO DE LA PLATA</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2256302198,-34.8577594283,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 2</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 2</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1897979615,-34.9091463573,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 20</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 20</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">OESTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.3532982106,-34.789532808,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 21</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 21</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">NORTE CENTRO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2212584236,-34.8046584009,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 22 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 22 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">OESTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2566066337,-34.7990295895,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 23</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 23</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">OESTE</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2972010427,-34.8242821795,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 24</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 24</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">RIO DE LA PLATA</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2528570388,-34.8872343032,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 3</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 3</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.18989058979999,-34.90207248,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 4</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 4</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.17704437900001,-34.8933918955,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 5</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 5</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1698559417,-34.9067022809,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 6</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 6</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1915795849,-34.8864939727,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 7 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 7 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">SUR</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">2</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.2088400966,-34.8643752468,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 8 SEDE DE DISTRITO</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 8 SEDE DE DISTRITO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">NORTE CENTRO</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">3</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.20844139409999,-34.8424748841,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark>
+		<name>Unidad 9</name>
+		<Snippet maxLines="0"></Snippet>
+		<description><![CDATA[<table border=0 cellpadding=0 cellspacing=3  width=300  style="FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;"><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>NOMBRE</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">Unidad 9</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>DISTRITO</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">DE LA COSTA</font></td></tr><tr><td bgcolor="#EEEEEE" align="left"><font COLOR="#000000"><b>ZONA POLICIAL</b></font></td><td bgcolor="#E6F2F7"> <font COLOR="#000000">1</font></td></tr></table>]]></description>
+		<styleUrl>#MapRollOver</styleUrl>
+		<Point>
+			<coordinates>-56.1531962175,-34.8938919554,0</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>

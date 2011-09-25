@@ -13,6 +13,8 @@ import java.util.List;
 import memoria.commons.dataAccess.query.VisualQuery;
 import memoria.commons.entities.Escuela;
 import memoria.commons.structures.GeoReferenced;
+import memoria.dataAccess.dao.CsvDao;
+import memoria.dataAccess.dao.ShapeFileDao;
 
 /**
  *
@@ -27,6 +29,8 @@ public class RepositoriesManager {
         entitiesLocationMap = new HashMap<String,List<IRepositoryDao>>();
         List<IRepositoryDao> repositoriosDeEscuela = new ArrayList<IRepositoryDao>();
         repositoriosDeEscuela.add(ExcelDao.getInstance());
+        repositoriosDeEscuela.add(CsvDao.getInstance());
+        repositoriosDeEscuela.add(ShapeFileDao.getInstance());
         entitiesLocationMap.put(Escuela.class.getSimpleName(),repositoriosDeEscuela);
     }
 
