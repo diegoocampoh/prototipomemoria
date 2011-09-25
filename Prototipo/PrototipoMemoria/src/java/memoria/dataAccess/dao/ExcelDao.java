@@ -16,6 +16,7 @@ import jxl.*;
 import jxl.read.biff.BiffException;
 import memoria.commons.dataAccess.query.QueryParams;
 import memoria.commons.dataAccess.query.VisualQuery;
+import memoria.commons.entities.EntidadPunto;
 import memoria.commons.entities.Escuela;
 import memoria.commons.structures.AbstractGeographicElement;
 import memoria.commons.structures.coordinates.Coordinate;
@@ -45,18 +46,40 @@ public class ExcelDao implements IRepositoryDao {
             Workbook workbook = Workbook.getWorkbook(new File(this.getClass().getResource("/memoria/resources/industri.xls").getPath()));
             Sheet sheet = workbook.getSheet(0);
             List<GeoReferenced> results = new ArrayList<GeoReferenced>();
-            for(int i = 1; i <503; i++){
-                Cell ai = sheet.getCell(0,i);
-                Cell bi = sheet.getCell(1,i);
-                Cell ci = sheet.getCell(2,i);
-                LatLonCoordinate coordenadas = new LatLonCoordinate(bi.getContents(), ci.getContents());
-                double[]latlong = CoordinateConversion.utm2LatLon("21 A "+  bi.getContents() + " " + ci.getContents());
-                System.out.println(latlong[0]+";"+latlong[1]);
-                Point pi = new Point(Long.parseLong(ai.getContents()), coordenadas);
-                Escuela escuela = new Escuela(pi);
-                results.add(escuela);
+
+            for(int i = 1; i <sheet.getRows(); i++){
+
+                EntidadPunto escuela = null;
+                try {
+                    Cell id = sheet.getCell(0, i);
+                    Cell lat = sheet.getCell(1, i);
+                    Cell lon = sheet.getCell(2, i);
+                    String nombre = "";
+                    try {
+                        nombre = sheet.getCell(3, i).getContents();
+                    } catch (Exception e) {
+                         //Logger.getLogger(ExcelDao.class.getName()).log(Level.SEVERE, "Error al leer nombre", e);
+                    }
+                    String descripcion = "";
+                    try {
+                        descripcion = sheet.getCell(4, i).getContents();
+                    } catch (Exception e) {
+                         //Logger.getLogger(ExcelDao.class.getName()).log(Level.SEVERE, "Error al leer descripcion", e);
+                    }
+                    double[] latlong = CoordinateConversion.utm2LatLon("21 A " + lat.getContents() + " " + lon.getContents());
+                    LatLonCoordinate coordenadas = new LatLonCoordinate(latlong[0], latlong[1]);
+                    //System.out.println(latlong[0]+";"+latlong[1]);
+                    Point pi = new Point(Long.parseLong(id.getContents()), coordenadas);
+                    escuela = new EntidadPunto( nombre,  descripcion,pi);
+                    results.add(escuela);
+                } catch (Exception e) {
+                   Logger.getLogger(ExcelDao.class.getName()).log(Level.SEVERE, "Error al leer entidad", e);
+                }
+                
             }
-            return params.getFiltro().filter(results);
+            if ( params.getFiltro() != null)
+                return params.getFiltro().filter(results);
+            return results;
         } catch (IOException ex) {
             Logger.getLogger(ExcelDao.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BiffException ex) {
@@ -64,4 +87,6 @@ public class ExcelDao implements IRepositoryDao {
         }
         return null;
     }
+
+    
 }
