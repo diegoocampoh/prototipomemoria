@@ -15,28 +15,15 @@ import memoria.commons.structures.Point;
  *
  * @author diego
  */
-public class Escuela extends GeoReferenced<Point>{
+   public class Escuela extends EntidadPunto{
 
-    private String nombre;
-    private Point location;
-
-    public Point getLocation() {
-        return location;
+    public Escuela(Point location, String nombre, String descripcion) {
+        super(nombre, descripcion, location);
     }
 
-    public void setLocation(Point location) {
-        this.location = location;
-    }
-
-    public Escuela(Point location) {
-        this.location = location;
-        this.nombre = "fruta";
-    }
-
-
-    @XmlElement(name = "representation")
-    public Point getSpatialRepresentation() {
-        return this.location;
+    @Override
+    public String getIconName() {
+        return "iconEscuela";
     }
 
 }

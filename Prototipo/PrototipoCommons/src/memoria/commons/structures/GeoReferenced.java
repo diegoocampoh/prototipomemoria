@@ -14,11 +14,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author diego
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(namespace="http://georeferenced")
 public abstract class GeoReferenced<T extends AbstractGeographicElement> {
 
-    @XmlElement(name = "representation")
     public abstract T getSpatialRepresentation();
+    public abstract String getNombre();
+    public abstract String getDescripcion();
+    public abstract String getIconName();
 
 }
