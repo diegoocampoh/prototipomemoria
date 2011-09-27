@@ -5,6 +5,7 @@
 
 package memoria.commons.structures;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class Line extends AbstractGeographicElement {
 
-    private List<Point> points;
+    private List<Point> points = new ArrayList<Point>();
 
     public Line() {
     }
@@ -25,6 +26,13 @@ public class Line extends AbstractGeographicElement {
     public void setPoints(List<Point> points) {
         this.points = points;
     }
+
+    @Override
+    public List<Point> getCenterPoints() {
+        return getPoints();
+    }
+
+
 
    
 }

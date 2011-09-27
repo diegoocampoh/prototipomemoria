@@ -51,4 +51,11 @@ public class Point extends AbstractGeographicElement{
         return Arrays.asList(this);
     }
 
+    @Override
+    public List<Point> getCenterPoints() {
+        return getPoints();
+    }
+
+
+
 }
