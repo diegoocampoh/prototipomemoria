@@ -50,7 +50,7 @@ public class RectangleFilter extends GisFilter {
         List<GeoReferenced> results = new ArrayList<GeoReferenced>();
 
         for (GeoReferenced geoReferenced : data) {
-            List<Point> puntos = geoReferenced.getSpatialRepresentation().getPoints();
+            List<Point> puntos = geoReferenced.getSpatialRepresentation().getCenterPoints();
             for (Point p : puntos){
                 if((p.getCoordiante().to_double_x() >= this.southWest.getCoordiante().to_double_x() &&
                        (p.getCoordiante().to_double_x() <= this.northEast.getCoordiante().to_double_x()) &&
