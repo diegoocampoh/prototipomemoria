@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-workspace name="Projects" soapui-version="2.5" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:project name="OpenSoa-03.2.2">../Chapter03/3.2.2Components/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-03.2.3">../Chapter03/3.2.3Services/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-03.2.4">../Chapter03/3.2.4Properties/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-03.2.5">../Chapter03/3.2.5Implementation/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-03.2.6">../Chapter03/3.2.6References/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-04.1">../Chapter04/4.1ComponentTypes/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-04.2.1">../Chapter04/4.2.1Conversations/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-04.2.2">../Chapter04/4.2.2Callbacks/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-04.3">../Chapter04/4.3ScriptingLanguages/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-04.4.2">../Chapter04/4.4.2SDO/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-07.2.2">../Chapter07/7.2.2jBPMServices/soap-ui-project/jBPM-SCA-Server-soapui-project.xml</con:project>
+  <con:project name="OpenSoa-08.7">../Chapter08/8.7EsperSCA/soapUI/EsperSCA-soapui-project.xml</con:project>
+  <con:project name="OpenSoa-09">../Chapter09/soapUI/soapui-inbound.xml</con:project>
+  <con:project name="OpenSoa-10">../Chapter10/soapUI/soapui-inbound.xml</con:project>
+  <con:project status="CLOSED" name="OpenSoa-04.4.1">../Chapter04/4.4.1ProductionDeployment/soapUI/projectTicketServerProject.xml</con:project>
+  <con:project name="OpenSoa-12">../Chapter12/soapUI/DroolsService-soapui-project.xml</con:project>
+</con:soapui-workspace>

@@ -1,0 +1,52 @@
+2009-05-19 13:46:15,665 WARN  [DefaultSoapUICore] Missing folder [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\ext] for external libraries
+2009-05-19 13:46:15,987 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\soapui-settings.xml]
+2009-05-19 13:46:16,615 INFO  [WorkspaceImpl] Loading workspace from [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\default-soapui-workspace.xml]
+2009-05-19 13:46:16,691 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter03/3.2.2Components/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:16,955 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter03/3.2.3Services/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:16,965 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter03/3.2.4Properties/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:16,979 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter03/3.2.5Implementation/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:16,989 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter03/3.2.6References/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:17,002 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter04/4.1ComponentTypes/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:17,010 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter04/4.2.1Conversations/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:17,019 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter04/4.2.2Callbacks/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:17,032 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter04/4.3ScriptingLanguages/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:17,041 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter04/4.4.2SDO/soapUI/projectTicketServerProject.xml]
+2009-05-19 13:46:17,088 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter07/7.2.2jBPMServices/soap-ui-project/jBPM-SCA-Server-soapui-project.xml]
+2009-05-19 13:46:17,135 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter08/8.7EsperSCA/soapUI/EsperSCA-soapui-project.xml]
+2009-05-19 13:46:17,162 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter09/soapUI/soapui-inbound.xml]
+2009-05-19 13:46:17,316 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter10/soapUI/soapui-inbound.xml]
+2009-05-19 13:46:17,360 INFO  [WsdlProject] Loaded project from [file:/C:/Eclipse/workspace-opensoabook/OpenSOA-Book/soapUI/../Chapter12/soapUI/DroolsService-soapui-project.xml]
+2009-05-19 13:47:51,946 INFO  [WsdlProject] Saved project [OpenSoa-03.2.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.2Components\soapUI\projectTicketServerProject.xml - 5099 bytes
+2009-05-19 13:47:51,957 INFO  [WsdlProject] Saved project [OpenSoa-03.2.3] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.3Services\soapUI\projectTicketServerProject.xml - 6377 bytes
+2009-05-19 13:47:51,965 INFO  [WsdlProject] Saved project [OpenSoa-03.2.4] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.4Properties\soapUI\projectTicketServerProject.xml - 6379 bytes
+2009-05-19 13:47:51,971 INFO  [WsdlProject] Saved project [OpenSoa-03.2.5] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.5Implementation\soapUI\projectTicketServerProject.xml - 4444 bytes
+2009-05-19 13:47:51,980 INFO  [WsdlProject] Saved project [OpenSoa-03.2.6] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.6References\soapUI\projectTicketServerProject.xml - 5470 bytes
+2009-05-19 13:47:51,987 INFO  [WsdlProject] Saved project [OpenSoa-04.1] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.1ComponentTypes\soapUI\projectTicketServerProject.xml - 6379 bytes
+2009-05-19 13:47:51,991 INFO  [WsdlProject] Saved project [OpenSoa-04.2.1] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.2.1Conversations\soapUI\projectTicketServerProject.xml - 5103 bytes
+2009-05-19 13:47:52,003 INFO  [WsdlProject] Saved project [OpenSoa-04.2.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.2.2Callbacks\soapUI\projectTicketServerProject.xml - 6379 bytes
+2009-05-19 13:47:52,009 INFO  [WsdlProject] Saved project [OpenSoa-04.3] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.3ScriptingLanguages\soapUI\projectTicketServerProject.xml - 6555 bytes
+2009-05-19 13:47:52,022 INFO  [WsdlProject] Saved project [OpenSoa-04.4.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.4.2SDO\soapUI\projectTicketServerProject.xml - 6370 bytes
+2009-05-19 13:47:52,061 INFO  [WsdlProject] Saved project [OpenSoa-07.2.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter07\7.2.2jBPMServices\soap-ui-project\jBPM-SCA-Server-soapui-project.xml - 280076 bytes
+2009-05-19 13:47:52,065 INFO  [WsdlProject] Saved project [OpenSoa-08.7] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter08\8.7EsperSCA\soapUI\EsperSCA-soapui-project.xml - 6317 bytes
+2009-05-19 13:47:52,074 INFO  [WsdlProject] Saved project [OpenSoa-09] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter09\soapUI\soapui-inbound.xml - 134410 bytes
+2009-05-19 13:47:52,090 INFO  [WsdlProject] Saved project [OpenSoa-10] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter10\soapUI\soapui-inbound.xml - 190488 bytes
+2009-05-19 13:47:52,100 INFO  [WsdlProject] Saved project [OpenSoa-12] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter12\soapUI\DroolsService-soapui-project.xml - 55962 bytes
+2009-05-19 13:47:52,107 INFO  [WorkspaceImpl] Saved workspace to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\default-soapui-workspace.xml]
+2009-05-19 13:48:00,282 INFO  [AbstractHttpRequestDesktopPanel] Got response for [EsperManagerBinding.sendProcessStartEndEvent:Request 1] in 415ms (236 bytes)
+2009-05-19 13:48:14,135 INFO  [DefaultSoapUICore] Settings saved to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\soapui-settings.xml]
+2009-05-19 13:48:14,140 INFO  [WsdlProject] Saved project [OpenSoa-03.2.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.2Components\soapUI\projectTicketServerProject.xml - 5099 bytes
+2009-05-19 13:48:14,144 INFO  [WsdlProject] Saved project [OpenSoa-03.2.3] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.3Services\soapUI\projectTicketServerProject.xml - 6377 bytes
+2009-05-19 13:48:14,150 INFO  [WsdlProject] Saved project [OpenSoa-03.2.4] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.4Properties\soapUI\projectTicketServerProject.xml - 6379 bytes
+2009-05-19 13:48:14,154 INFO  [WsdlProject] Saved project [OpenSoa-03.2.5] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.5Implementation\soapUI\projectTicketServerProject.xml - 4444 bytes
+2009-05-19 13:48:14,159 INFO  [WsdlProject] Saved project [OpenSoa-03.2.6] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter03\3.2.6References\soapUI\projectTicketServerProject.xml - 5470 bytes
+2009-05-19 13:48:14,166 INFO  [WsdlProject] Saved project [OpenSoa-04.1] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.1ComponentTypes\soapUI\projectTicketServerProject.xml - 6379 bytes
+2009-05-19 13:48:14,171 INFO  [WsdlProject] Saved project [OpenSoa-04.2.1] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.2.1Conversations\soapUI\projectTicketServerProject.xml - 5103 bytes
+2009-05-19 13:48:14,177 INFO  [WsdlProject] Saved project [OpenSoa-04.2.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.2.2Callbacks\soapUI\projectTicketServerProject.xml - 6379 bytes
+2009-05-19 13:48:14,183 INFO  [WsdlProject] Saved project [OpenSoa-04.3] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.3ScriptingLanguages\soapUI\projectTicketServerProject.xml - 6555 bytes
+2009-05-19 13:48:14,190 INFO  [WsdlProject] Saved project [OpenSoa-04.4.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter04\4.4.2SDO\soapUI\projectTicketServerProject.xml - 6370 bytes
+2009-05-19 13:48:14,226 INFO  [WsdlProject] Saved project [OpenSoa-07.2.2] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter07\7.2.2jBPMServices\soap-ui-project\jBPM-SCA-Server-soapui-project.xml - 280076 bytes
+2009-05-19 13:48:14,230 INFO  [WsdlProject] Saved project [OpenSoa-08.7] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter08\8.7EsperSCA\soapUI\EsperSCA-soapui-project.xml - 6317 bytes
+2009-05-19 13:48:14,240 INFO  [WsdlProject] Saved project [OpenSoa-09] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter09\soapUI\soapui-inbound.xml - 134410 bytes
+2009-05-19 13:48:14,254 INFO  [WsdlProject] Saved project [OpenSoa-10] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter10\soapUI\soapui-inbound.xml - 190488 bytes
+2009-05-19 13:48:14,263 INFO  [WsdlProject] Saved project [OpenSoa-12] to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\..\Chapter12\soapUI\DroolsService-soapui-project.xml - 55962 bytes
+2009-05-19 13:48:14,269 INFO  [WorkspaceImpl] Saved workspace to [C:\Eclipse\workspace-opensoabook\OpenSOA-Book\soapUI\default-soapui-workspace.xml]
