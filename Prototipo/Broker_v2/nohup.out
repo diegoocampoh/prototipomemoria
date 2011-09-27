@@ -1,0 +1,56 @@
+Buildfile: build.xml
+
+compile:
+
+recepcion.broker.server:
+     [java] 26-sep-2011 20:49:03 org.apache.tuscany.sca.node.impl.NodeImpl <init>
+     [java] INFO: Creating node: recepcionConsultas.composite
+     [java] 26-sep-2011 20:49:04 org.apache.tuscany.sca.node.impl.NodeImpl configureNode
+     [java] INFO: Loading contribution: file:/home/flor/workspace/Broker_v2/target/classes/
+     [java] 26-sep-2011 20:49:05 org.apache.tuscany.sca.node.impl.NodeImpl configureNode
+     [java] INFO: Loading composite: file:/home/flor/workspace/Broker_v2/target/classes/recepcionConsultas.composite
+     [java] 26-sep-2011 20:49:05 org.apache.tuscany.sca.assembly.builder.impl.ComponentReferenceWireBuilderImpl
+     [java] ADVERTENCIA: No targets for reference: Composite = {http://broker.service.recepcion}RecepcionConsultasComposite Reference = analizadorConsulta
+     [java] 26-sep-2011 20:49:05 org.apache.tuscany.sca.node.impl.NodeImpl start
+     [java] INFO: Starting node: recepcionConsultas.composite
+     [java] WARN - JMSListener.init(125) | No JMS connection factories are defined.Will not listen for any JMS messages
+     [java] WARN - JMSListener.init(125) | No JMS connection factories are defined.Will not listen for any JMS messages
+     [java] 26-sep-2011 20:49:05 org.apache.tuscany.sca.http.jetty.JettyServer addServletMapping
+     [java] INFO: Added Servlet mapping: http://ubuntu:8081/ReceptorConsultaService
+     [java] Servidor de recepcion de Consultas inicializado (presione Enter para detenerlo)
+     [java] 26-sep-2011 20:49:05 org.apache.tuscany.sca.node.impl.NodeImpl stop
+     [java] INFO: Stopping node: recepcionConsultas.composite
+     [java] 26-sep-2011 20:49:05 org.apache.tuscany.sca.http.jetty.JettyServer removeServletMapping
+     [java] INFO: Removed Servlet mapping: /ReceptorConsultaService
+     [java] Recepcion Server finalizado
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+Buildfile: build.xml
+
+compile:
+
+recepcion.broker.server:
+     [java] 26-sep-2011 20:51:40 org.apache.tuscany.sca.node.impl.NodeImpl <init>
+     [java] INFO: Creating node: recepcionConsultas.composite
+     [java] 26-sep-2011 20:51:41 org.apache.tuscany.sca.node.impl.NodeImpl configureNode
+     [java] INFO: Loading contribution: file:/home/flor/workspace/Broker_v2/target/classes/
+     [java] 26-sep-2011 20:51:42 org.apache.tuscany.sca.node.impl.NodeImpl configureNode
+     [java] INFO: Loading composite: file:/home/flor/workspace/Broker_v2/target/classes/recepcionConsultas.composite
+     [java] 26-sep-2011 20:51:42 org.apache.tuscany.sca.assembly.builder.impl.ComponentReferenceWireBuilderImpl
+     [java] ADVERTENCIA: No targets for reference: Composite = {http://broker.service.recepcion}RecepcionConsultasComposite Reference = analizadorConsulta
+     [java] 26-sep-2011 20:51:42 org.apache.tuscany.sca.node.impl.NodeImpl start
+     [java] INFO: Starting node: recepcionConsultas.composite
+     [java] WARN - JMSListener.init(125) | No JMS connection factories are defined.Will not listen for any JMS messages
+     [java] WARN - JMSListener.init(125) | No JMS connection factories are defined.Will not listen for any JMS messages
+     [java] 26-sep-2011 20:51:43 org.apache.tuscany.sca.http.jetty.JettyServer addServletMapping
+     [java] INFO: Added Servlet mapping: http://ubuntu:8081/ReceptorConsultaService
+     [java] Servidor de recepcion de Consultas inicializado (presione Enter para detenerlo)
+     [java] 26-sep-2011 20:51:43 org.apache.tuscany.sca.node.impl.NodeImpl stop
+     [java] INFO: Stopping node: recepcionConsultas.composite
+     [java] 26-sep-2011 20:51:43 org.apache.tuscany.sca.http.jetty.JettyServer removeServletMapping
+     [java] INFO: Removed Servlet mapping: /ReceptorConsultaService
+     [java] Recepcion Server finalizado
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
