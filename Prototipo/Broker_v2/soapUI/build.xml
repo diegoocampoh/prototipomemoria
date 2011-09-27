@@ -1,0 +1,109 @@
+<project name="soapui" default="run.soapui.gui" basedir="." >
+
+	<property file="../build.properties"/>
+
+	<fileset id="soapUI.jars" dir="${general.lib}">
+		<include name="jsr173-xmlbeans-2.4.0.jar"/>
+		<include name="xbean-fixed-2.4.0.jar"/>
+		<include name="activation-1.1.jar"/>
+		<include name="mail-1.4.jar"/>
+		<include name="wsdl4j-1.6.2-fixed.jar"/>
+		<include name="junit-4.5.jar"/>
+		<include name="log4j-1.2.15.jar"/>
+		<include name="opencsv-1.8.jar"/>
+		<include name="rsyntaxtextarea-1.0-soapui.jar"/>
+		<include name="looks-2.2.0.jar"/>
+		<include name="binding-2.0.1.jar"/>
+		<include name="forms-1.0.7.jar"/>
+		<include name="jcalendar-1.3.2.jar"/>
+		<include name="commons-logging-1.1.1.jar"/>
+		<include name="commons-collections-3.1.jar"/>
+		<include name="commons-lang-2.1.jar"/>
+		<include name="commons-io-1.4.jar"/>
+		<include name="not-yet-commons-ssl-0.3.10.jar"/>
+		<include name="commons-cli-1.0.jar"/>
+		<include name="commons-beanutils-1.7.0.jar"/>
+		<include name="commons-httpclient-3.1.jar"/>
+		<include name="json-lib-2.2.2-jdk15.jar"/>
+		<include name="ezmorph-1.0.5.jar"/>
+		<include name="xom-1.0.jar"/>
+		<include name="swingx-SNAPSHOT.jar"/>
+		<include name="l2fprod-common-fontchooser-0.2-dev.jar"/>
+		<include name="commons-codec-1.3.jar"/>
+		<include name="groovy-all-1.0.jar"/>
+		<include name="jetty-6.1.7.jar"/>
+		<include name="jetty-util-6.1.7.jar"/>
+		<include name="servlet-api-2.5.jar"/>
+		<include name="jxl-2.6.6.jar"/>
+		<include name="idw-1.5.0.jar"/>
+		<include name="ant-1.7.0.jar"/>
+		<include name="xbean_xpath-2.4.0.jar"/>
+		<include name="xmlpublic-2.4.0.jar"/>
+		<include name="soapui-2.5.jar"/>
+		<include name="soapui-xmlbeans-2.5.jar"/>
+		<include name="soapui-coverage-xmlbeans-2.5.jar"/>
+		<include name="license4j-1.3.jar"/>
+		<include name="ext-xmlbeans-1.0.jar"/>
+		<include name="policy-xmlbeans-1.5.jar"/>
+		<include name="soap-xmlbeans-1.2.jar"/>
+		<include name="wadl-xmlbeans-1.0.jar"/>
+		<include name="j2ee-xmlbeans-1.4.jar"/>
+		<include name="saxon-9.jar"/>
+		<include name="saxon-dom-9.jar"/>
+		<include name="xmlunit-1.2.jar"/>
+		<include name="xmlsec-1.4.2.jar"/>
+		<include name="xalan-2.7.0.jar"/>
+		<include name="xercesImpl-2.8.1.jar"/>
+		<include name="wss4j-1.5.4.jar"/>
+		<include name="opensaml-1.1.jar"/>
+		<include name="bcprov-jdk15-138.jar"/>
+		<include name="jtidy-20000804r7-noxml.jar"/>
+	</fileset>
+
+	<target name="run.soapui.gui" description="Starts the soapUI GUI for interactive testing...">
+		<java classname="com.eviware.soapui.SoapUI" fork="true" dir="${project.home}/soapUI">
+			<classpath>
+				<pathelement path="lib"/>
+				<fileset refid="soapUI.jars"/>
+			</classpath>
+			<jvmarg value="-Xms128m"/>
+			<jvmarg value="-Xmx384m"/>
+			<jvmarg value="-Dgroovy.source.encoding=iso-8859-1"/>
+			<jvmarg value="-Dsoapui.home=${project.home}/soapUI"/>
+
+		</java>
+	</target>
+
+	<target name="clean.logs">
+		<delete failonerror="false">
+			<fileset dir="${project.home}/soapUI" includes="*.log"/>
+		</delete>
+	</target>
+
+	<target name="run.testcase" depends="clean.logs">
+		<fail unless="soapui.test.suite" message="Must be called by one of the example targets, such as test.example.1"/>
+
+		<java classname="com.eviware.soapui.tools.SoapUITestCaseRunner" fork="true"
+			dir="${project.home}/soapUI">
+			<classpath>
+				<pathelement path="lib"/>
+				<fileset refid="soapUI.jars"/>
+			</classpath>
+			<jvmarg value="-Xms128m"/>
+			<jvmarg value="-Xmx384m"/>
+			<jvmarg value="-Dgroovy.source.encoding=iso-8859-1"/>
+			<jvmarg value="-Dsoapui.home=${project.home}/soapUI"/>
+			<arg value="-s"/>
+			<arg value="${soapui.test.suite}"/>
+			<arg value="-c"/>
+			<arg value="${soapui.test.case}"/>
+			<arg value="-r"/>
+			<arg value="-f"/>
+			<arg value="${basedir}/logs"/>
+			<arg value="-a"/>
+			<arg value="${soapui.workspace}"/>
+		</java>
+		<echo message="Logs can be found at: ${basedir}/logs"/>
+	</target>
+
+</project>

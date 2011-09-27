@@ -1,0 +1,67 @@
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one
+   or more contributor license agreements.  See the NOTICE file
+   distributed with this work for additional information
+   regarding copyright ownership.  The ASF licenses this file
+   to you under the Apache License, Version 2.0 (the
+   "License"); you may not use this file except in compliance
+   with the License.  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+   specific language governing permissions and limitations
+   under the License.    
+-->
+<ivysettings>
+	<resolvers>
+			<ibiblio name="atlassian"
+                root="http://maven.atlassian.com/repository/public/"
+                m2compatible="true"
+                usepoms="true" useMavenMetadata="true" />
+     <ibiblio name="ussg"
+                root="http://ftp.ussg.iu.edu/eclipse/modeling/emf/emf/maven2"
+                m2compatible="true"
+                usepoms="true" useMavenMetadata="true" />    
+     <ibiblio name="gdata"
+                root="http://people.apache.org/~lresende/google-gdata/maven/"
+                m2compatible="true"
+                usepoms="true" useMavenMetadata="true" />
+     <ibiblio name="codehaus"
+                root="http://repository.codehaus.org"
+                m2compatible="true"
+                usepoms="true" useMavenMetadata="true" />                     
+     <ibiblio name="jboss" m2compatible="true"
+                root="http://repository.jboss.org/maven2/"
+                usepoms="true" useMavenMetadata="true" />         
+     <ibiblio name="wso2" m2compatible="true"
+                root="http://dist.wso2.org/maven2/"
+                usepoms="true" useMavenMetadata="true" />                      
+     <ibiblio name="eviware" m2compatible="true"
+                root="http://www.eviware.com/repository/maven2"
+                usepoms="true" useMavenMetadata="true" />                                             
+					  <!--
+            <ibiblio name="java.net.m1"
+                root="http://download.java.net/maven/1/"
+                m2compatible="false"
+                usepoms="true" useMavenMetadata="true"
+                pattern="[organization]/[type]s/[module]-[revision].[ext]" />
+
+            <ibiblio name="java.net.m2"
+                root="http://download.java.net/maven/2/"
+                m2compatible="true"
+                usepoms="true" useMavenMetadata="true" />
+               
+            <ibiblio name="codehaus" m2compatible="true"
+                root="http://repository.codehaus.org/"
+                usepoms="true" useMavenMetadata="true" />
+
+            <ibiblio name="scannotation"
+                m2compatible="true"
+                root="http://scannotation.sf.net/maven2" />
+                -->
+	</resolvers>
+</ivysettings>
