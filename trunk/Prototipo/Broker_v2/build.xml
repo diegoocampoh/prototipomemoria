@@ -1,0 +1,52 @@
+<project name="brokerservice" default="recepcion.broker.server">
+	
+	<property file="build.properties" />
+	<import file="soapUI/build.xml"/> 
+		
+	<property name="server.class"  value="broker.geoConsulta.modulos.RecepcionServer" />
+
+	<target name="compile" description="Compiles the Java code...">
+		<mkdir dir="target/classes" />
+		<javac destdir="target/classes" debug="on" source="1.5" target="1.5">
+			<src path="src" />
+			<classpath>
+				<fileset dir="${tuscany.lib}">
+					<include name="*.jar"/>
+				</fileset>
+				<fileset dir="${general.lib}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+		
+		<copy todir="target/classes">
+			<fileset dir="resources" />
+		</copy>
+
+	</target>
+
+	<target name="clean">
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="target" />
+		</delete>
+		<delete includeemptydirs="true" failonerror="false">
+			<fileset dir="work" />
+		</delete>		
+	</target>
+
+	<target name="recepcion.broker.server" depends="compile" description="Starts the embedded Tuscany server...">
+        <java classname="${server.class}" fork="true">
+            <classpath>
+                <pathelement path="target/classes"/>
+            	<fileset dir="${tuscany.lib}">
+            		<include name="*.jar"/>
+            	</fileset>
+            	<fileset dir="${general.lib}">
+            		<include name="*.jar"/>
+            	</fileset>
+            </classpath>
+        </java>
+
+	</target>
+
+</project>
