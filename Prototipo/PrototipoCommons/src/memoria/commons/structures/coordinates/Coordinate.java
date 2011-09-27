@@ -13,6 +13,7 @@ public abstract class Coordinate{
 
     private String x;
     private String y;
+    private String z;
 
     public Coordinate(String x, String y) {
         this.x = x;
@@ -38,7 +39,20 @@ public abstract class Coordinate{
     public Coordinate() {
     }
 
+    public String getZ() {
+        return z;
+    }
+
+    public void setZ(String z) {
+        this.z = z;
+    }
+
+    
+
     public abstract double to_double_x();
     public abstract double to_double_y();
+    public abstract double to_double_z();
+
+
 
 }

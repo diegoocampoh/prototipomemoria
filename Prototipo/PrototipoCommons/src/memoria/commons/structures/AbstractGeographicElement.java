@@ -14,5 +14,6 @@ import java.util.List;
 public abstract class AbstractGeographicElement  {
 
     public abstract List<Point> getPoints();
+    public abstract List<Point> getCenterPoints();
 
 }

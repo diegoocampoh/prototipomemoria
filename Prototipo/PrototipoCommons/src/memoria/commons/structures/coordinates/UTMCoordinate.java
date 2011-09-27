@@ -21,4 +21,9 @@ public class UTMCoordinate extends Coordinate{
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public double to_double_z() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
 }

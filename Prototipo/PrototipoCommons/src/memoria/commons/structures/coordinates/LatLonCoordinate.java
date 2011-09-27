@@ -29,6 +29,12 @@ public class LatLonCoordinate extends Coordinate{
         this.setY(latitude.toString());
     }
 
+    public LatLonCoordinate(Double latitude, Double longitude, Double altitude) {
+        this.setX(longitude.toString());
+        this.setY(latitude.toString());
+        this.setZ(altitude.toString());
+    }
+
     @Override
     public double to_double_x() {
         return getLongitude();
@@ -37,6 +43,11 @@ public class LatLonCoordinate extends Coordinate{
     @Override
     public double to_double_y() {
         return getLatitude();
+    }
+
+    @Override
+    public double to_double_z() {
+        return Double.parseDouble(this.getZ());
     }
 
 
