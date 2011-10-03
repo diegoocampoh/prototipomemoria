@@ -47,7 +47,7 @@ public class WMSConsult {
     {
         this.Centro = unCentro;
     }
-    public void setSW(String[] unaCapas)
+    public void setCapas(String[] unaCapas)
     {
         this.Capas = unaCapas;
     }
