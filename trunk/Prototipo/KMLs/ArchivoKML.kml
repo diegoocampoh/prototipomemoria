@@ -3,7 +3,7 @@
  <Document>
 <Placemark>
 	 <Point>
-	 <coordinates> -36.123,-57.312</coordinates>
+	 <coordinates> -43.123,-50.312</coordinates>
  </Point> 
  </Placemark> 
 <Placemark> 
@@ -26,7 +26,6 @@
 -33.123,-54.612
 -34.123,-53.712
 -35.123,-52.112
--32.123,-55.412
 </coordinates> 
  </LinearRing> 
   </outerBoundaryIs> 
