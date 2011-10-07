@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+      xmlns:georss="http://www.georss.org/georss"
+      xmlns:woe="http://where.yahooapis.com/v1/schema.rng"
+      xmlns:flickr="urn:flickr:"
+      xmlns:media="http://search.yahoo.com/mrss/">
+
+  <title>The faulkner_usa Pool, with geodata</title>
+  <subtitle>Pictures of my dog in a variety of locations</subtitle>
+  <updated>2006-08-29T15:42:35Z</updated>
+
+  <entry>
+    <title>Manhattan, NY</title>
+    <link rel="alternate" type="text/html" />
+    <published>2006-08-29T15:42:35Z</published>
+    <updated>2006-08-29T15:42:35Z</updated>
+    <dc:date.Taken>2005-10-02T17:35:35-08:00</dc:date.Taken>
+    <georss:point>-33.397 -56.644</georss:point>
+    <geo:lat>-33.397</geo:lat>
+    <geo:long>-56.644</geo:long>
+  </entry>
+</feed>
