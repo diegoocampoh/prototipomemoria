@@ -3,8 +3,33 @@
  <Document>
 <Placemark>
 	 <Point>
-	 <coordinates> -43.123, 50.312,0</coordinates>
+	 <coordinates> -36.123,-57.312</coordinates>
  </Point> 
  </Placemark> 
- </Document> 
+<Placemark> 
+ <LineString>
+ <coordinates>
+-37.123,-57.412
+-38.123,-57.612
+-39.123,-57.712
+-40.123,-58.112
+</coordinates>
+ </LineString> 
+ </Placemark> 
+<Placemark> 
+	 <Polygon> 
+	 <extrude> 1 </extrude>
+<altitudeMode> relativeToGround</altitudeMode>
+	 <outerBoundaryIs> <LinearRing>
+	 <coordinates>
+-32.123,-55.412
+-33.123,-54.612
+-34.123,-53.712
+-35.123,-52.112
+-32.123,-55.412
+</coordinates> 
+ </LinearRing> 
+  </outerBoundaryIs> 
+ </Polygon> 
+ </Placemark></Document> 
  </kml>
