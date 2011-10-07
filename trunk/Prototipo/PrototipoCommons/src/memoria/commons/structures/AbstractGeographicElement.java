@@ -15,5 +15,6 @@ public abstract class AbstractGeographicElement  {
 
     public abstract List<Point> getPoints();
     public abstract List<Point> getCenterPoints();
+    public abstract String getTypeRepresentation();
 
 }

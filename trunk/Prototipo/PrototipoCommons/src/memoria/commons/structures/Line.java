@@ -28,6 +28,12 @@ public class Line extends AbstractGeographicElement {
     }
 
     @Override
+    public String getTypeRepresentation()
+    {
+        return "Line";
+    }
+
+    @Override
     public List<Point> getCenterPoints() {
         return getPoints();
     }
