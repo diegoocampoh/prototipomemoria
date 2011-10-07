@@ -16,18 +16,5 @@
 </coordinates>
  </LineString> 
  </Placemark> 
-<Placemark> 
-	 <Polygon>
-	 <outerBoundaryIs> <LinearRing>
-	 <coordinates>
--32.123,-55.412
--33.123,-54.612
--34.123,-53.712
--35.123,-52.112
-</coordinates> 
- </LinearRing> 
-  </outerBoundaryIs> 
- </Polygon> 
- </Placemark>
  </Document> 
  </kml>
