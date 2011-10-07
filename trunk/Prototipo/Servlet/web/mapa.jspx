@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Document   : mapa
+    Created on : 10/02/2011, 10:55:37 AM
+    Author     : Fran
+-->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+     
+    <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            var latlng = new google.maps.LatLng(41.875696,-87.624207);
+            var myOptions =
+                {
+                zoom: 11,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.SATELLITE
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/OtroNuevo.kml');
+            elKAMELE.setMap(map);
+           /* var marker = new google.maps.Marker({https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
+               position: latlng,
+               map: map, http://code.google.com/p/prototipomemoria/source/browse/trunk/Prototipo/KMLs/ArchivoKML.kml
+               title:"Hello World!"
+            });*/
+      //  map.getBounds().getSouthWest()
+      
+
+
+            
+        }
+    </script>
+
+
+    <!-- any content can be specified here, e.g.: -->
+    <jsp:element name="text">
+        <jsp:attribute name="lang">EN;</jsp:attribute>
+        <jsp:body>
+            
+
+                              
+         
+            <div id="map_canvas" style="width:50%; height:50%">
+
+            </div>
+           <script type="text/javascript">
+                var latlng = new google.maps.LatLng(41.875696,-87.624207);
+                var myOptions =
+                    {
+                    zoom: 11,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                //var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                /*var marker = new google.maps.Marker({
+                       position: latlng,
+                       map: map,
+    https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
+                       title:"Hello World!"
+                });*/
+                var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/OtroNuevo.kml');
+                elKAMELE.setMap(map);
+
+              
+            </script>
+           
+
+        </jsp:body>
+
+    </jsp:element>
+
+</jsp:root>

@@ -1,0 +1,68 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <form action="/Servlet/Servletprueba">
+            <% String example = "AAAA";
+            request.getSession().setAttribute("parm1","pepOsdfan"); %>
+            <input type="submit" name="confirmar"></input>
+    </form>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+  </script>
+    <script type="text/javascript">
+        function initialize() {
+            var latlng = new google.maps.LatLng(41.875696,-87.624207);
+            var myOptions =
+                {
+                zoom: 11,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.SATELLITE
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/files/UNKML.kml');
+            elKAMELE.setMap(map);
+           /* var marker = new google.maps.Marker({https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
+               position: latlng,
+               map: map,
+               title:"Hello World!"
+            });*/
+      //  map.getBounds().getSouthWest()
+
+
+
+        }
+    </script>
+  <body>
+    <h1> KML </h1>
+            <div id="map_canvas" style="width:50%; height:50%">
+
+            </div>
+           <script type="text/javascript">
+                var latlng = new google.maps.LatLng(41.875696,-87.624207);
+                var myOptions =
+                    {
+                    zoom: 11,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                //var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                /*var marker = new google.maps.Marker({
+                       position: latlng,
+                       map: map,
+    https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
+                       title:"Hello World!"
+                });*/
+                var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/files/UNKML.kml');
+                elKAMELE.setMap(map);
+                </script>
+
+  </body>
+</html>
