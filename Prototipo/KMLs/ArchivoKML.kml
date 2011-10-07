@@ -6,15 +6,5 @@
 	 <coordinates> -43.123, 50.312</coordinates>
  </Point> 
  </Placemark> 
-<Placemark> 
- <LineString>
- <coordinates>
--37.123,-57.412
--38.123,-57.612
--39.123,-57.712
--40.123,-58.112
-</coordinates>
- </LineString> 
- </Placemark> 
  </Document> 
  </kml>
