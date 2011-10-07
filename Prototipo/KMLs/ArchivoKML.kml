@@ -17,9 +17,7 @@
  </LineString> 
  </Placemark> 
 <Placemark> 
-	 <Polygon> 
-	 <extrude> 1 </extrude>
-<altitudeMode> relativeToGround</altitudeMode>
+	 <Polygon>
 	 <outerBoundaryIs> <LinearRing>
 	 <coordinates>
 -32.123,-55.412
