@@ -14,14 +14,12 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
  */
 public class XmlSerializable<T> {
 
-    public String toXml(){
-        XStream xstream = new XStream(new DomDriver());
-        return xstream.toXML(this);
+    public String toXml(){       
+        return XStreamInstance.toXml(this);
     }
 
     public T toObject(String xml){
-        XStream xstream = new XStream(new DomDriver());
-        return ((T)xstream.fromXML(xml));
+        return ((T)XStreamInstance.toObject(xml));
     }
 
 }
