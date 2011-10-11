@@ -1,7 +1,7 @@
 package broker.geoConsulta.entidades;
 
 
-public class Filtro {
+public class Filtro implements iFilter{
 	private Coordenada downLeftCorner;
 	private Coordenada upRightCorner;
 	public Coordenada getDownLeft() {
