@@ -3,7 +3,7 @@
 	name="RecepcionConsultasComposite">
 
 	<service name="ReceptorConsultaComponent" promote="ReceptorConsultaComponent">
-		<binding.ws uri="http://localhost:8081/ReceptorConsultaService" />
+		<binding.ws uri="http://localhost:8085/ReceptorConsultaService" />
 	</service>
 
 	<component name="ReceptorConsultaComponent">
