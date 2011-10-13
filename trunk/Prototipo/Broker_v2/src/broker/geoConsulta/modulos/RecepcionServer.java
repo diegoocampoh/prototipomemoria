@@ -10,7 +10,7 @@ import org.apache.tuscany.sca.host.embedded.SCADomain;
 public class RecepcionServer {
 
 	public static void main(String[] args) {
-		SCADomain scaDomain = SCADomain.newInstance("recepcionConsultas.composite");
+		SCADomain scaDomain = SCADomain.newInstance("recepcionConsultas_v2.composite");
 		try {
             System.out.println("Servidor de recepcion de Consultas inicializado (presione Enter para detenerlo)");
             System.in.read();
