@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import memoria.commons.dataAccess.query.VisualQuery;
 import memoria.commons.entities.EntidadPunto;
 import memoria.commons.entities.Escuela;
@@ -32,11 +33,13 @@ public class CsvDao implements IRepositoryDao{
         return instance;
     }
 
+    private String fileUrl;
+
     public List<GeoReferenced> getData(VisualQuery params) {
          List<GeoReferenced> results = new ArrayList<GeoReferenced>();
         try {
 
-                CsvReader educacion = new CsvReader(this.getClass().getResource("/memoria/resources/data/educacion/educacion.csv").getPath());
+                CsvReader educacion = new CsvReader(fileUrl);
                 educacion.readHeaders();
                 while (educacion.readRecord())
                 {
@@ -65,6 +68,10 @@ public class CsvDao implements IRepositoryDao{
         if ( params.getFiltro() != null)
             return params.getFiltro().filter(results);
         return results;
+    }
+
+    public void setInitParams(Map<String, String> params) {
+        this.fileUrl = params.get("URL");
     }
 
 }

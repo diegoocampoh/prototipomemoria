@@ -6,6 +6,7 @@
 package memoria.dataAccess;
 
 import java.util.List;
+import java.util.Map;
 import memoria.commons.dataAccess.query.QueryParams;
 import memoria.commons.dataAccess.query.VisualQuery;
 import memoria.commons.structures.GeoReferenced;
@@ -16,4 +17,5 @@ import memoria.commons.structures.GeoReferenced;
  */
 public interface IRepositoryDao {
     List<GeoReferenced> getData(VisualQuery params);
+    void setInitParams(Map<String,String> params);
 }
