@@ -11,11 +11,11 @@ public class UserQuery  extends XmlSerializable {
 	private List<String> capas;
     private GisFilter filtro;
 
-    public List<String> getCapa() {
+    public List<String> getCapas() {
         return capas;
     }
 
-    public void setCapa(List<String> capas) {
+    public void setCapas(List<String> capas) {
         this.capas = capas;
     }
 
