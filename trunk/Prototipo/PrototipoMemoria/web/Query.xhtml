@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--Fireworks CS3 Dreamweaver CS3 target.  Created Thu Jun 23 15:30:01 GMT-0300 (Montevideo Standard Time) 2011-->
+        <link rel="stylesheet" type="text/css" href="view.css" media="all"/>
+        <script type="text/javascript" src="view.js"></script>
+        <script type="text/javascript" src="calendar.js"></script>
+        <style type="text/css">
+            td img {display: block;}
+            body {
+                background-image: url("img/background.png");
+                background-position: 0% 50%;
+                background-repeat: no-repeat;
+            }
+            .content{
+                margin-right: 10px;
+                display: block;
+                margin-top:10px;
+            }
+
+            .contenedor{
+                display: block;
+                margin: 0 auto;
+                width: 900px;
+            }
+            .map-container{
+                width: 900px;
+                height: 500px;
+                horizontal-align:center;
+                margin-top: 10px;
+            }
+
+        </style>
+
+
+        <style type="text/css">
+            @import url("http://www.google.com/uds/css/gsearch.css");
+            @import url("http://www.google.com/uds/solutions/localsearch/gmlocalsearch.css");
+        </style>
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAuPsJpk3MBtDpJ4G8cqBnjRRaGTYH6UMl8mADNa0YKuWNNa8VNxQCzVBXTx2DYyXGsTOxpWhvIG7Djw" type="text/javascript"></script>
+        <script src="http://www.google.com/uds/api?file=uds.js&amp;v=1.0" type="text/javascript"></script>
+
+        <script src="http://www.google.com/uds/solutions/localsearch/gmlocalsearch.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+        function initialize() {
+      if (GBrowserIsCompatible()) {
+
+        var map = new GMap2(document.getElementById("map"));
+        var center = new GLatLng(-34.89952766562065, -56.165394720459);
+        map.addControl(new google.maps.LocalSearch(), new GControlPosition(G_ANCHOR_BOTTOM_RIGHT, new GSize(10,20)));
+        map.setCenter(center, 13);
+        map.setUIToDefault();
+
+
+        var marker = new GMarker(center, {draggable: true});
+
+        GEvent.addListener(map, "move", function() {
+           document.getElementById("form_231301:id_lat").value = map.getCenter().lat();
+           document.getElementById("form_231301:id_lng").value = map.getCenter().lng();
+
+           document.getElementById("form_231301:id_lat_sw").value = map.getBounds().getSouthWest().lat();
+           document.getElementById("form_231301:id_lng_sw").value = map.getBounds().getSouthWest().lng();
+
+           document.getElementById("form_231301:id_lat_ne").value = map.getBounds().getNorthEast().lat();
+           document.getElementById("form_231301:id_lng_ne").value = map.getBounds().getNorthEast().lng();
+
+           marker.setLatLng(map.getCenter())
+         });
+        document.getElementById("id_zoom").value = map.getZoom();
+        GEvent.addListener(map, "zoomend", function() {
+          document.getElementById("id_zoom").value = map.getZoom();
+        });
+
+        map.addOverlay(marker);
+
+
+      }
+    }
+    GSearch.setOnLoadCallback(initialize);
+        </script>
+
+    </head>
+
+    <h:body  onload="initialize()" onunload="GUnload()">
+
+        <div id="header" align="top">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+
+
+                    </td>
+                    <td>
+
+                    </td>
+
+
+                </tr>
+            </table>
+        </div>
+        <div class="contenedor">
+
+            <div align="center" id="map" class="map-container"></div>
+            <div class="content" align="center">
+
+
+
+            </div>
+            <div id="form_container">
+                <h:form id="form_231301" styleClass="appnitro"  >
+                    <div class="left">
+                        <h:inputText id="id_lat" value="#{queryBean.latcenter}"/>
+                        <h:inputText id="id_lng" value="#{queryBean.loncenter}"/>
+                        <label for="id_lat">Centro</label>
+                    </div>
+                    <p/>
+                    <div class="left">
+                        <h:inputText id="id_lat_sw" value="#{queryBean.SWlat}"/>
+                        <h:inputText id="id_lng_sw" value="#{queryBean.SWlon}"/>
+                        <label for="id_lat_sw">Esquina inferior izquierda</label>
+                    </div>
+                    <p/>
+                    <div class="left">
+                        <h:inputText id="id_lat_ne" value="#{queryBean.NElat}" />
+                        <h:inputText id="id_lng_ne" value="#{queryBean.NElon}"/>
+                        <label for="id_lat_sw">Esquina superior derecha</label>
+                    </div>
+                    <div class="left">
+                        <input type="text" name="zoom" id="id_zoom" />
+                        <label for="id_zoom">Zoom</label>
+                    </div>
+
+                    <h:commandButton  action="#{queryBean.ejecutarQuery}"  />
+
+                </h:form>
+            </div>
+
+        </div>
+
+
+    </h:body>
+</html>
+

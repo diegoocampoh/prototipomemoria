@@ -10,6 +10,7 @@ import java.util.List;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jxl.*;
@@ -41,9 +42,11 @@ public class ExcelDao implements IRepositoryDao {
         return instance;
     }
 
+    private String fileUrl;
+
     public List<GeoReferenced> getData(VisualQuery params) {
         try {
-            Workbook workbook = Workbook.getWorkbook(new File(this.getClass().getResource("/memoria/resources/industri.xls").getPath()));
+            Workbook workbook = Workbook.getWorkbook(new File(fileUrl));
             Sheet sheet = workbook.getSheet(0);
             List<GeoReferenced> results = new ArrayList<GeoReferenced>();
 
@@ -86,6 +89,10 @@ public class ExcelDao implements IRepositoryDao {
             Logger.getLogger(ExcelDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+
+    public void setInitParams(Map<String, String> params) {
+        this.fileUrl = params.get("URL");
     }
 
     
