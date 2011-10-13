@@ -4,7 +4,7 @@ import broker.geoConsulta.entidades.Consulta;
 import broker.geoConsulta.modulos.*;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.thoughtworks.xstream.XStream;
-import memoria.commons.dataAccess.query.VisualQuery;
+import memoria.commons.dataAccess.query.UserQuery;
 import memoria.commons.structures.GeoReferenced;
 import java.util.List;
 
@@ -19,18 +19,13 @@ public class AnalizadorConsultaComponentImp implements
 	
 	public String interpretarConsulta(String xml){
 		XStream xstream = new XStream(new DomDriver());
+		UserQuery query = null;
         try {
-            VisualQuery query = (VisualQuery) xstream.fromXML(params);
-            //hago lo que quiera con la consulta
-            //RepositoriesManager repoManager = new RepositoriesManager();
-            List<GeoReferenced> results = repoManager.getData(query);
-            return xstream.toXML(results);
-
-        } catch (Exception e) {
+            query = (UserQuery) xstream.fromXML(xml);
+        	} catch (Exception e) {
             e.printStackTrace();
         }
-        return "";
-		return this.ejecutorConsulta.ejecutarConsulta(xml);
+        return this.ejecutorConsulta.ejecutarConsulta(query);
 	}
 	
 	@Reference
