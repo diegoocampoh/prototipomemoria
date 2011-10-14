@@ -32,7 +32,7 @@ public class Line extends AbstractGeographicElement {
     @Override
     public String getTypeRepresentation()
     {
-        return "Line";
+       return "Line";
     }
 
     @Override
