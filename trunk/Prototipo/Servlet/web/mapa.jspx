@@ -49,14 +49,8 @@
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
                 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-                //var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-                /*var marker = new google.maps.Marker({
-                       position: latlng,
-                       map: map,
-    https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
-                       title:"Hello World!"
-                });*/
-                var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/OtroNuevo.kml');
+                //ACA HAY QUE PONER LA URL DEL ARCHIVO KML
+                var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/KMLFB.kml');
                 elKAMELE.setMap(map);
 
               
