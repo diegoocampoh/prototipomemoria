@@ -381,7 +381,6 @@
 	<classpathentry kind="lib" path="tuscany-lib/tuscany-wsdl2java-1.4.jar"/>
 	<classpathentry kind="lib" path="tuscany-lib/tuscany-xsd-1.4.jar"/>
 	<classpathentry kind="lib" path="tuscany-lib/tuscany-xsd-xml-1.4.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Commons"/>
 	<classpathentry kind="lib" path="C:/eclipse II/plugins/org.apache.axis_1.4.0.v201005080400/lib/axis.jar"/>
 	<classpathentry kind="lib" path="C:/eclipse II/plugins/javax.xml.rpc_1.1.0.v201005080400/lib/jaxrpc.jar"/>
 	<classpathentry kind="lib" path="C:/eclipse II/plugins/javax.xml.soap_1.2.0.v201005080501/lib/saaj.jar"/>
