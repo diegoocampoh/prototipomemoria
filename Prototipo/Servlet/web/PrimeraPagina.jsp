@@ -35,10 +35,7 @@
                     <input type="text" name="id_lng_ne" id="id_lng_ne" />
                     <label for="id_lat_sw">Esquina superior derecha</label>
 
-                <input type="text" name="zoom" id="id_zoom" />
-                <label for="id_zoom">Zoom</label>
-
-
+                
             <input id="testo" type="text" name="testo"/>
             <!--input type="button" name="Consultar" value="Confirmar" onclick="consulta()"> </input-->
             <input type="submit" name="confirmar" onclick="consulta()"> </input>
@@ -49,7 +46,7 @@
   </script>
     <script type="text/javascript">
         function initialize() {
-            var latlng = new google.maps.LatLng(41.875696,-87.624207);
+            var latlng = new google.maps.LatLng(-34.81115696,-56.1624207);
             var myOptions =
                 {
                 zoom: 11,
@@ -84,7 +81,7 @@
 
             </div>
            <script type="text/javascript">
-                var latlng = new google.maps.LatLng(41.875696,-87.624207);
+                var latlng = new google.maps.LatLng(-34.81115696,-56.1624207);
                 var myOptions =
                     {
                     zoom: 11,
