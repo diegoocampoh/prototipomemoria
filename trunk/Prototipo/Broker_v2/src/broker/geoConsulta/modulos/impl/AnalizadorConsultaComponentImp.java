@@ -17,13 +17,9 @@ public class AnalizadorConsultaComponentImp implements
 	
 	public String interpretarConsulta(String xml){
 		XStream xstream = new XStream(new DomDriver());
-		UserQuery query = null;
 		String answer = "";
-        try {
-            query = (UserQuery) xstream.fromXML(xml);
-        	} catch (Exception e) {
-            e.printStackTrace();
-        }
+        UserQuery query = (UserQuery) xstream.fromXML(xml);
+        	
         answer = this.ejecutorConsulta.ejecutarConsulta(query);
         return answer;
 	}
