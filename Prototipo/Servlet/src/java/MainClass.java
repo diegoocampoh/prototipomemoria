@@ -20,7 +20,7 @@ public class MainClass {
      public static void main(String [] args)
     {
          System.out.println("Empieza");
-         XStream st = new XStream();
+        /* XStream st = new XStream();
 
          //TEST: UN PUNTO
          Coordinate c1 = new LatLonCoordinate("-36.123","-57.312");
@@ -71,7 +71,23 @@ public class MainClass {
          lista.add(pol1);
          String result = st.toXML(lista);
          ManejadorRespuesta mR = new ManejadorRespuesta();
-         mR.ParsearRespuesta(result);
+         mR.ParsearRespuesta(result);*/
+
+        // ManejadorRespuesta mR = new ManejadorRespuesta();
+         //mR.CommitKML("22");
+         Validador val = new Validador();
+         //val.EmpezarTest();
+         Cronometer cron = new Cronometer();
+         cron.empezarTest();
+        //ManejadorRespuesta mR = new ManejadorRespuesta();
+         //mR.TestValidar();
+         try{
+          //   val.validar();
+         }catch(Exception e)
+         {
+             System.out.println("AAASADDSA " + e.getMessage());
+         }
+
 
         //mR.TestLlenarArray();
         //mR.generarArchivoKML();
