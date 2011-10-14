@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <kml xmlns="http://www.opengis.net/kml/2.2"> 
+ <Document>
+<Placemark>
+	 <Point>
+	 <coordinates> -35.123,-57.312</coordinates>
+ </Point> 
+ </Placemark> 
+<Placemark> 
+ <LineString>
+ <coordinates>
+-36.23,-56.412
+-37.123,-56.612
+-38.123,-56.712
+-39.123,-56.112
+</coordinates>
+ </LineString> 
+ </Placemark> 
+<Placemark> 
+	 <Polygon> 
+ <outerBoundaryIs> <LinearRing>
+	 <coordinates>
+-39.123,-50.412
+-38.333123,-51.231612
+-39.36123,-51.712555
+-37.111123,-52.112
+-39.123,-50.412
+</coordinates> 
+ </LinearRing> 
+  </outerBoundaryIs> 
+ </Polygon> 
+ </Placemark></Document> 
+ </kml>
