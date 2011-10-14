@@ -54,6 +54,7 @@
                 mapTypeId: google.maps.MapTypeId.SATELLITE
             };
             //google.maps.event.addListener(map, "move", function(){
+
                       document.getElementById("id_lat").value = map.getCenter().lat();
                       document.getElementById("id_lng").value = map.getCenter().lng();
 
@@ -74,7 +75,7 @@
 
         }
     </script>
-  <body>
+      <body>
     <h1> KML </h1>
      
             <div id="map_canvas" style="width:50%; height:50%">
@@ -98,21 +99,21 @@
                       
         //});
              function consulta(){
-                        alert("Empezo");
+                        //alert("Empezo");
                       document.getElementById("id_lat").value = map.getCenter().lat();
                       document.getElementById("id_lng").value = map.getCenter().lng();
-                        alert("Termino3");
+                        //alert("Termino3");
                       document.getElementById("id_lat_sw").value = map.getBounds().getSouthWest().lat();
                       document.getElementById("id_lng_sw").value = map.getBounds().getSouthWest().lng();
-                          alert("Termino4");
+                       //   alert("Termino4");
                       document.getElementById("id_lat_ne").value = map.getBounds().getNorthEast().lat();
                       document.getElementById("id_lng_ne").value = map.getBounds().getNorthEast().lng();
-                             alert("Termino5");
+                          //   alert("Termino5");
                        //marker.setLatLng(map.getCenter())
        //  });           alert("Termino");
                       //alert("Termino6");
                       document.getElementById("id_zoom").value = map.getZoom();
-                      alert("Termino00");
+                     // alert("Termino00");
        // GEvent.addListener(map, "zoomend", function() {
                      /// document.getElementById("id_zoom").value = map.getZoom();
                       
