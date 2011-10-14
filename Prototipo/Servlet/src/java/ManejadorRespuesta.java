@@ -194,7 +194,7 @@ public class ManejadorRespuesta {
     {
         //C:\Program Files\SlikSvn\bin
         //String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Test01.kml";
-        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\Servlet\\KMLS\\KMLFB.kml";
+        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\KMLFB.kml";
         FileWriter fw;
         BufferedWriter bw;
         String archivo = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n <kml xmlns=\"http://www.opengis.net/kml/2.2\"> \n <Document>\n";
