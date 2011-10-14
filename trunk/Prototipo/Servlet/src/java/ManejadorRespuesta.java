@@ -194,7 +194,7 @@ public class ManejadorRespuesta {
     {
         //C:\Program Files\SlikSvn\bin
         //String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Test01.kml";
-        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\Servlet\\Arch01.kml";
+        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\Servlet\\KMLS\\KMLFB.kml";
         String NombreArchivo = "ArchivoKML.kml";
         FileWriter fw;
         BufferedWriter bw;
@@ -216,8 +216,7 @@ public class ManejadorRespuesta {
             e.printStackTrace();
         }
         System.out.println("llamo aca a lo que quiero llamar");
-        //
-         CommitKML(NombreArchivo);
+        
 
        
     }
