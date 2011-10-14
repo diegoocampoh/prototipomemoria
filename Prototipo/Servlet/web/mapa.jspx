@@ -12,7 +12,7 @@
     </script>
     <script type="text/javascript">
         function initialize() {
-            var latlng = new google.maps.LatLng(41.875696,-87.624207);
+            var latlng = new google.maps.LatLng(-35.1115696,-54.624207);
             var myOptions =
                 {
                 zoom: 11,
@@ -20,14 +20,7 @@
                 mapTypeId: google.maps.MapTypeId.SATELLITE
             };
             var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-            var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/OtroNuevo.kml');
-            elKAMELE.setMap(map);
-           /* var marker = new google.maps.Marker({https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
-               position: latlng,
-               map: map, http://code.google.com/p/prototipomemoria/source/browse/trunk/Prototipo/KMLs/ArchivoKML.kml
-               title:"Hello World!"
-            });*/
-      //  map.getBounds().getSouthWest()
+            
       
 
 
@@ -48,7 +41,7 @@
 
             </div>
            <script type="text/javascript">
-                var latlng = new google.maps.LatLng(41.875696,-87.624207);
+                var latlng = new google.maps.LatLng(-34.1115696,-55.624207);
                 var myOptions =
                     {
                     zoom: 11,
