@@ -24,7 +24,7 @@ public class Polygon extends Line {
     @Override
     public String getTypeRepresentation()
     {
-        return "Polygon";
+       return "Polygon";
     }
 
     public void setCenter(Point center) {

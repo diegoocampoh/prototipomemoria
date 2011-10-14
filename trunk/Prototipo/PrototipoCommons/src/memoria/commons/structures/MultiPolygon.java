@@ -24,7 +24,7 @@ public class MultiPolygon extends AbstractGeographicElement {
     @Override
     public String getTypeRepresentation()
     {
-        return "Multipolygon";
+       return "Multipolygon";
     }
     public void setLineas(List<Polygon> lineas) {
         this.poligonos = lineas;

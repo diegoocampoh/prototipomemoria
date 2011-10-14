@@ -26,10 +26,10 @@ public class Point extends AbstractGeographicElement{
         this.coordiante = coordiante;
     }
 
-    @Override
+   @Override
     public String getTypeRepresentation()
     {
-        return "Point";
+       return "Point";
     }
 
     public Point() {
