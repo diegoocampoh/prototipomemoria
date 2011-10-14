@@ -26,10 +26,19 @@ public class EjecutorConsultaComponentImpl implements
 		VisualQuery vsQuery;
 		String respuesta = "";
 		for(String entidad :  query.getCapas()){
-			vsQuery = new VisualQuery(entidad,query.getFiltro());
+			
+			if (query.getFiltro().equals("")){
+				vsQuery = new VisualQuery(entidad);
+			}else{
+				vsQuery = new VisualQuery(entidad, query.getFiltro());
+			}
+			
 			try {
 				WsTransformadorPortBindingStub cliente = new WsTransformadorPortBindingStub();
-				respuesta = cliente.getData(xstream.toXML(vsQuery));
+				String vsQueryStr = xstream.toXML(vsQuery);
+				System.out.println("EjecutorConsulta realiza consulta a Transformer: " + vsQueryStr);
+				respuesta = cliente.getData(vsQueryStr);
+				System.out.println("EjecutorConsulta Transformer responde: " + respuesta);
 			} catch (RemoteException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
