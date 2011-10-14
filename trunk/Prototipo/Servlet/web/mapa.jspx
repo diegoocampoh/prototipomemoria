@@ -20,7 +20,7 @@
                 mapTypeId: google.maps.MapTypeId.SATELLITE
             };
             var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-            var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/OtroNuevo.kml');
+            var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/Servlet/Arch01.kml');
             elKAMELE.setMap(map);
            /* var marker = new google.maps.Marker({https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
                position: latlng,
@@ -63,7 +63,7 @@
     https://sites.google.com/site/kameleprototipo/kmlejemplo.kml
                        title:"Hello World!"
                 });*/
-                var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/OtroNuevo.kml');
+                var elKAMELE = new google.maps.KmlLayer('http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/Servlet/Arch01.kml');
                 elKAMELE.setMap(map);
 
               

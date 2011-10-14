@@ -26,8 +26,7 @@ public class Poligono implements ElemGeograf {
     }
 
     public String ToKml(int nivel) {
-        String result = "<Placemark> \n\t <Polygon> \n\t <extrude> 1 </extrude>\n" +
-                "<altitudeMode> relativeToGround</altitudeMode>\n\t <outerBoundaryIs> <LinearRing>\n\t <coordinates>\n";
+        String result = "<Placemark> \n\t <Polygon> \n <outerBoundaryIs> <LinearRing>\n\t <coordinates>\n";
         for(Coordenadas cord:coord)
         {
             result = result + cord.ToKml() + "\n";

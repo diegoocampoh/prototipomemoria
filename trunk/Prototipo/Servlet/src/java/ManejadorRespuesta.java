@@ -1,6 +1,7 @@
 
 import com.thoughtworks.xstream.XStream;
 import java.io.BufferedWriter;
+import javax.xml.validation.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -99,14 +100,14 @@ public class ManejadorRespuesta {
                  XStream st = new XStream();
 
          //TEST: UN PUNTO
-         Coordinate c1 = new LatLonCoordinate("-30.123","-57.312");
+         Coordinate c1 = new LatLonCoordinate("-35.123","-57.312");
          Point p1 = new Point(c1);
 
          //TEST: UNA LINEA
-         Coordinate c2 = new LatLonCoordinate("-31.123","-57.412");
-         Coordinate c3 = new LatLonCoordinate("-32.123","-57.612");
-         Coordinate c4 = new LatLonCoordinate("-33.123","-57.712");
-         Coordinate c5 = new LatLonCoordinate("-34.123","-58.112");
+         Coordinate c2 = new LatLonCoordinate("-36.23","-56.412");
+         Coordinate c3 = new LatLonCoordinate("-37.123","-56.612");
+         Coordinate c4 = new LatLonCoordinate("-38.123","-56.712");
+         Coordinate c5 = new LatLonCoordinate("-39.123","-56.112");
 
          Point p2 = new Point(c2);
          Point p3 = new Point(c3);
@@ -121,10 +122,10 @@ public class ManejadorRespuesta {
          l1.setPoints(points);
 
          //TEST: UN POLIGONO
-         Coordinate c6 = new LatLonCoordinate("-35.123","-55.412");
-         Coordinate c7 = new LatLonCoordinate("-36.123","-54.612");
-         Coordinate c8 = new LatLonCoordinate("-37.123","-53.712");
-         Coordinate c9 = new LatLonCoordinate("-38.123","-52.112");
+         Coordinate c6 = new LatLonCoordinate("-39.123","-50.412");
+         Coordinate c7 = new LatLonCoordinate("-38.333123","-51.231612");
+         Coordinate c8 = new LatLonCoordinate("-39.36123","-51.712555");
+         Coordinate c9 = new LatLonCoordinate("-37.111123","-52.112");
 
          Point p6 = new Point(c6);
          Point p7 = new Point(c7);
@@ -150,7 +151,8 @@ public class ManejadorRespuesta {
          this.generarArchivoKML();
 
     }
-    public void TestLlenarArray()
+
+    private void TestLlenarArray()
     {
         Coordenadas c1 = new Coordenadas(-36.123,-56.312);
         Coordenadas c10 = new Coordenadas(-32.5675123,-57.8888432);
@@ -191,7 +193,8 @@ public class ManejadorRespuesta {
     public void generarArchivoKML ()
     {
         //C:\Program Files\SlikSvn\bin
-        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\OtroNuevo.kml";
+        //String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Test01.kml";
+        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\Servlet\\Arch01.kml";
         String NombreArchivo = "ArchivoKML.kml";
         FileWriter fw;
         BufferedWriter bw;
@@ -207,13 +210,16 @@ public class ManejadorRespuesta {
             bw.write(archivo);
             bw.close();
             fw.close();
-            //CommitKML(NombreArchivo);
+            
         }catch(IOException e)
         {
             e.printStackTrace();
         }
+        System.out.println("llamo aca a lo que quiero llamar");
+        //
+         CommitKML(NombreArchivo);
 
-        //C:\Program Files\SlikSvn\bin
+       
     }
     public void CommitKML(String rutaArchivo)
     {try
@@ -228,12 +234,18 @@ public class ManejadorRespuesta {
              //   Logger.getLogger(ManejadorRespuesta.class.getName()).log(Level.SEVERE, null, ex);
             //}
 
+         p2 = Runtime.getRuntime().exec("svn add Arch01.kml");
+
          System.out.println("Pasa el primero");
-         p2 = Runtime.getRuntime().exec("C:\\Program Files\\SlikSvn\\bin commit ArchivoKML.kml -m=\"Subo KML generado\"");
+
          System.out.println("No termina");
          int exitVal;
             try {
-                System.out.println("No termjjjjjina");
+
+                int a = p2.waitFor();
+                System.out.println("Termina con valorr "+ a);
+                p2 = Runtime.getRuntime().exec("svn commit Arch01.kml -m\" Last \"");
+                System.out.println("No termina");
                 exitVal = p2.waitFor();
                 System.out.println("Termina con error " + exitVal);
             } catch (InterruptedException ex) {
