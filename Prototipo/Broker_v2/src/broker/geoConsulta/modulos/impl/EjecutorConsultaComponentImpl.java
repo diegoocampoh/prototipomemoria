@@ -20,6 +20,7 @@ public class EjecutorConsultaComponentImpl implements
 	
 	
 	public String ejecutarConsulta(UserQuery query){
+		System.out.println("Entra a EjecutorConsultaComponentImpl.ejecutarConsulta");
 		List<GeoReferenced> resultados = new ArrayList<GeoReferenced>();
 		XStream xstream = new XStream(new DomDriver());
 		
@@ -27,7 +28,7 @@ public class EjecutorConsultaComponentImpl implements
 		String respuesta = "";
 		for(String entidad :  query.getCapas()){
 			
-			if (query.getFiltro().equals("")){
+			if (query.getFiltro() == null){
 				vsQuery = new VisualQuery(entidad);
 			}else{
 				vsQuery = new VisualQuery(entidad, query.getFiltro());
@@ -39,9 +40,8 @@ public class EjecutorConsultaComponentImpl implements
 				System.out.println("EjecutorConsulta realiza consulta a Transformer: " + vsQueryStr);
 				respuesta = cliente.getData(vsQueryStr);
 				System.out.println("EjecutorConsulta Transformer responde: " + respuesta);
-			} catch (RemoteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			}catch(Exception e){
+				return "Erorr en Ejecutor " + e.getMessage();
 			}
 			
 			List<GeoReferenced> resultado = (List<GeoReferenced>) xstream.fromXML(respuesta);
