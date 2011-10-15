@@ -16,11 +16,10 @@ public class AnalizadorConsultaComponentImp implements
 	private EjecutorConsultaComponent ejecutorConsulta;
 	
 	public String interpretarConsulta(String xml){
+		System.out.println("Entra a AnalizadorConsultaComponentImp.interpretarConsulta");
 		XStream xstream = new XStream(new DomDriver());
-		String answer = "";
-        UserQuery query = (UserQuery) xstream.fromXML(xml);
-        	
-        answer = this.ejecutorConsulta.ejecutarConsulta(query);
+		UserQuery query = (UserQuery) xstream.fromXML(xml);
+	    String answer = this.ejecutorConsulta.ejecutarConsulta(query);
         return answer;
 	}
 	

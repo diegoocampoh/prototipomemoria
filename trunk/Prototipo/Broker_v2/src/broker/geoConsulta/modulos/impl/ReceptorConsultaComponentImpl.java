@@ -15,7 +15,7 @@ public class ReceptorConsultaComponentImpl implements
 		try{
 			resultado = this.analizadorConsulta.interpretarConsulta(consultaXml);
 		}catch(Exception e){
-			return "Error Interno en Broker: " + e.getMessage();
+			return e.getMessage();
 		}
 		return resultado;
 	}
