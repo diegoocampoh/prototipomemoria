@@ -1,5 +1,5 @@
 
-import de.micromata.opengis.kml.v_2_2_0.Kml;
+//import de.micromata.opengis.kml.v_2_2_0.Kml;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
