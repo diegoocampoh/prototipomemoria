@@ -37,11 +37,13 @@ public class Consultador {
         consulta.setNE(esqNE);
         consulta.setSW(esqSW);
         consulta.setCapas(capas);
+        System.out.println("Hasta aca llega");
         String xml = st.toXML(consulta);
 
         System.out.println(xml);
 
         String fileName = "C:\\Users\\Fran\\UNXML.txt";
+        System.out.println("Se rompe");
         //String NombreArchivo = "ArchivoKML.kml";
         FileWriter fw;
         BufferedWriter bw;
