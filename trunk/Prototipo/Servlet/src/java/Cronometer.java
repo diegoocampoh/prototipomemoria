@@ -27,29 +27,51 @@ import memoria.commons.structures.coordinates.LatLonCoordinate;
  */
 public class Cronometer {
 
-    int maxPtosLinea=15;
+    int maxPtosLinea=35;
+    int poblacion=385;
+
     public void empezarTest()
     {
+        List<Long> tiempos = new ArrayList<Long>();
+        for (int i = 0 ; i < this.poblacion ; i = i + 1)
+        {
+           List<AbstractGeographicElement> lista = this.cantidadElementos();
+           XStream st = new XStream();
+           String result = st.toXML(lista);
+           long a =  System.currentTimeMillis();
+           //System.out.println("Empieza "+ a);
+           List<ElemGeograf> listaElementos = this.ParsearRespuesta(result);
+           this.generarArchivoKML(2,listaElementos);
+           long b = System.currentTimeMillis();
+           //System.out.println("Termina "+b);
+           System.out.println("Test "+i+" duro "+(b-a) + " milisegundos");
+           tiempos.add(b-a);
+        }
         //cargar resultados de la consulta aleatoriamente
-        List<AbstractGeographicElement> lista = this.cantidadElementos();
-        XStream st = new XStream();
-        String result = st.toXML(lista);
-
-        //System.out.println(result);
-       long a =  System.currentTimeMillis();
-       System.out.println("Empieza "+ a);
-       List<ElemGeograf> listaElementos = this.ParsearRespuesta(result);
-       this.generarArchivoKML(listaElementos);
-       this.CommitKML("sa");
-       long b = System.currentTimeMillis();
-       System.out.println("Termina "+b);
-       System.out.println("Duracion "+(b-a));
+        System.out.println("Total "+poblacion);
+        double media;
+        //calcular media
+        double sumatoriaM = 0;
+        for(int i = 0 ; i < poblacion ; i = i+1)
+        {
+            sumatoriaM = sumatoriaM + tiempos.get(i);
+        }
+        media = (1.0/poblacion) * sumatoriaM;
+        double desviacion;
+        //calcular desviacion;
+        double sumatoriaD = 0;
+        for(int  i = 0 ; i < poblacion ; i = i + 1)
+        {
+            sumatoriaD = sumatoriaD + Math.pow((tiempos.get(i) - media),2);
+        }
+        desviacion = Math.sqrt(sumatoriaD/poblacion);
+        System.out.println("Media "+media+" desviacion "+desviacion);
     }
 
     private List<AbstractGeographicElement> cantidadElementos()
     {
              Random r = new Random();
-             int max=200;
+             int max=300;
              int cantPoligonos;
              int cantPtos;
              int cantLineas;
@@ -220,11 +242,11 @@ public class Cronometer {
           return listaParseada;
     }
 
-    public void generarArchivoKML (List<ElemGeograf> listaElementos)
+    public void generarArchivoKML (int numeroDelArchivo, List<ElemGeograf> listaElementos)
     {
         //C:\Program Files\SlikSvn\bin
        // String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Cronometro\\Test01.kml";
-        String fileName = "C:\\Users\\Fran\\prototipomemoria\\Prototipo\\Servlet\\TestCron1.kml";
+        String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Cronometro\\Test"+numeroDelArchivo+".kml";
         String NombreArchivo = "ArchivoKML.kml";
         FileWriter fw;
         BufferedWriter bw;
@@ -245,52 +267,13 @@ public class Cronometer {
         {
             e.printStackTrace();
         }
-        System.out.println("llamo aca a lo que quiero llamar");
+        //System.out.println("llamo aca a lo que quiero llamar");
         //
         // CommitKML(NombreArchivo);
 
 
     }
-    public void CommitKML(String rutaArchivo)
-    {try
-     {
-         System.out.println("Empieza el commit");
-         Process p2;
-         //try {
-                //p2= Runtime.getRuntime().exec("C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs");
-                //int val1 = p2.waitFor();
-                //System.out.println("error" + val1);
-           // } catch (InterruptedException ex) {
-             //   Logger.getLogger(ManejadorRespuesta.class.getName()).log(Level.SEVERE, null, ex);
-            //}
-
-         p2 = Runtime.getRuntime().exec("svn add TestCron1.kml");
-
-         System.out.println("Pasa el primero");
-
-         System.out.println("No termina");
-         int exitVal;
-            try {
-
-                p2.waitFor();
-                p2 = Runtime.getRuntime().exec("svn commit TestCron1.kml -m\" Last \"");
-                System.out.println("No termina");
-                exitVal = p2.waitFor();
-
-                System.out.println("Termina con error " + exitVal);
-            } catch (InterruptedException ex) {
-                System.out.println("ERRRRORRRR");
-                Logger.getLogger(ManejadorRespuesta.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-//No puedo ejecutarlo
-     }catch(IOException e)
-     {
-            System.out.println("Exception "+e.getMessage());
-     }
-
-
-    }
+    
 
 
 }
