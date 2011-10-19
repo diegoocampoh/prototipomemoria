@@ -78,7 +78,8 @@ public class MainClass {
          Validador val = new Validador();
          //val.EmpezarTest();
          Cronometer cron = new Cronometer();
-         cron.empezarTest();
+         //cron.empezarTest();
+         val.EmpezarTest();
         //ManejadorRespuesta mR = new ManejadorRespuesta();
          //mR.TestValidar();
          try{

@@ -32,7 +32,7 @@ public class Servletprueba extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         int cantidadCapas = 3;
-        System.out.println("Vino por aca" + (String)request.getParameter("testo"));
+        System.out.println("Vino por aca" +  (String)request.getParameter("testo"));
         System.out.println("Vino por aca1" + (String)request.getParameter("id_lat"));
         System.out.println("Vino por aca2" + (String)request.getParameter("id_lng"));
         System.out.println("Vino por aca3" + (String)request.getParameter("id_lat_sw"));

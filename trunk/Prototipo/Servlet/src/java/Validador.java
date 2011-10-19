@@ -31,8 +31,8 @@ import org.xml.sax.SAXException;
 public class Validador {
 
   // List<ElemGeograf> listaElementos;
-    int maxPtosLinea = 20;
-    int poblacion = 5;
+    int maxPtosLinea = 40;
+    int poblacion = 200;
          public  void validar (String fileNames) throws SAXException, IOException
          {
 
@@ -52,6 +52,7 @@ public class Validador {
         Validator validator = schema.newValidator();
        // System.out.println("4 ");
         // 4. Parse the document you want to check.
+        System.out.println(fileNames);
         FileInputStream f = new FileInputStream(new File("C:\\Users\\Fran\\Desktop\\Validaciones\\"+fileNames+".kml"));
         Source source = new StreamSource(f);
    //     System.out.println("5 ");
@@ -88,7 +89,8 @@ public class Validador {
             try {
                 this.validar(fileNames);
             } catch (Exception ex) {
-                System.out.println("Exception: " + ex.getMessage());
+                System.out.println("Exception es aca: " + ex.getMessage());
+               //ex.printStackTrace();
             }
              }
 
@@ -96,7 +98,7 @@ public class Validador {
          private List<ElemGeograf> startFill()
          {
              Random r = new Random();
-             int max=200;
+             int max=300;
              int cantPoligonos;
              int cantPtos;
              int cantLineas;
@@ -140,7 +142,7 @@ public class Validador {
          {
              Random r = new Random();
              int cantidadDePuntos = r.nextInt(maxPtosLinea);
-             while(cantidadDePuntos == 0)
+             while(cantidadDePuntos < 2)
              {
                  cantidadDePuntos = r.nextInt(maxPtosLinea);
              }
@@ -160,7 +162,7 @@ public class Validador {
          {
               Random r = new Random();
              int cantidadDePuntos = r.nextInt(maxPtosLinea);
-             while(cantidadDePuntos == 0)
+             while(cantidadDePuntos < 4)
              {
                  cantidadDePuntos = r.nextInt(maxPtosLinea);
              }
@@ -180,11 +182,11 @@ public class Validador {
              Random r = new Random();
              double lat = r.nextDouble()*100;
              double lon = r.nextDouble()*100;
-             while(lat<10 || lat>90)
+             while(lat<30 || lat>60)
              {
                  lat = r.nextDouble()*100;
              }
-             while(lon<10 || lon>90)
+             while(lon<30 || lon>60)
              {
                  lon = r.nextDouble()*100;
              }
@@ -264,7 +266,7 @@ public class Validador {
         {
             e.printStackTrace();
         }
-        System.out.println("llamo aca a lo que quiero llamar");
+        //System.out.println("llamo aca a lo que quiero llamar");
 
 
 
