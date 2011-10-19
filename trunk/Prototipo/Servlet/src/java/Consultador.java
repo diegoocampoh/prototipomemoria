@@ -3,7 +3,13 @@ import com.thoughtworks.xstream.XStream;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import memoria.commons.dataAccess.query.UserQuery;
+import memoria.commons.dataAccess.query.filtro.RectangleFilter;
 import memoria.commons.structures.WMSConsult;
+import memoria.commons.*;
+import memoria.commons.structures.Point;
 import memoria.commons.structures.coordinates.Coordinate;
 
 /*
@@ -27,11 +33,11 @@ public class Consultador {
             System.out.println("Las capas "+capas[i]);
         }
         XStream st = new XStream();
-        st.alias("WMSConsult", WMSConsult.class);
+        //st.alias("WMSConsult", WMSConsult.class);
 
 
         //hay que corregir estas cosas pero ya esta saliendo
-        WMSConsult consulta = new WMSConsult();
+        /*WMSConsult consulta = new WMSConsult();
 
         consulta.setCentro(centro);
         consulta.setNE(esqNE);
@@ -42,9 +48,29 @@ public class Consultador {
 
         System.out.println(xml);
 
-        String fileName = "C:\\Users\\Fran\\UNXML.txt";
+        
         System.out.println("Se rompe");
         //String NombreArchivo = "ArchivoKML.kml";
+         *
+         */
+        String fileName = "C:\\Users\\Fran\\Consulta.txt";
+        List<String> lasCapas = new ArrayList<String>();
+        for(String c : capas)
+        {
+            lasCapas.add(c);
+        }
+        RectangleFilter rf = new RectangleFilter();
+        Point NE = new Point();
+        NE.setCoordiante(esqNE);
+        Point SW = new Point();
+        SW.setCoordiante(esqSW);
+
+
+        rf.setNorthEast(NE);
+        rf.setSouthWest(SW);
+        UserQuery UQ = new UserQuery(lasCapas, rf);
+        String xml = st.toXML(UQ);
+
         FileWriter fw;
         BufferedWriter bw;
 
