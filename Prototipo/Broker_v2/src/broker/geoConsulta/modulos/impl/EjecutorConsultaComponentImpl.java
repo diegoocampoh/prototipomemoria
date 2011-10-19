@@ -41,7 +41,7 @@ public class EjecutorConsultaComponentImpl implements
 				respuesta = cliente.getData(vsQueryStr);
 				System.out.println("EjecutorConsulta Transformer responde: " + respuesta);
 			}catch(Exception e){
-				return "Erorr en Ejecutor " + e.getMessage();
+				e.printStackTrace();
 			}
 			
 			List<GeoReferenced> resultado = (List<GeoReferenced>) xstream.fromXML(respuesta);
@@ -56,5 +56,12 @@ public class EjecutorConsultaComponentImpl implements
 			resultados.add(ref);
 		}
 		return resultados;
+	}
+	
+	public static void main(String[] args) {
+		EjecutorConsultaComponentImpl cons = new EjecutorConsultaComponentImpl();
+		UserQuery uq = new UserQuery();
+		uq.addCapa("Escuelas");
+		cons.ejecutarConsulta(uq);
 	}
 }
