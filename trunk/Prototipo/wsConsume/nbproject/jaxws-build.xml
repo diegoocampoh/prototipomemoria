@@ -20,8 +20,8 @@
     </target>
     <target name="wsimport-client-wsTransformador" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/wsTransformador"/>
-        <property name="wsdl-wsTransformador" location="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8081/PrototipoMemoria/wsTransformador.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsTransformador" destdir="${build.generated.dir}/jax-wsCache/wsTransformador" wsdl="${wsdl-wsTransformador}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8081/PrototipoMemoria/wsTransformador?wsdl" xendorsed="true" package="wsconsume">
+        <property name="wsdl-wsTransformador" location="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8080/PrototipoMemoria/wsTransformador.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsTransformador" destdir="${build.generated.dir}/jax-wsCache/wsTransformador" wsdl="${wsdl-wsTransformador}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/PrototipoMemoria/wsTransformador?wsdl" xendorsed="true" package="wsconsume">
             <depends file="${wsdl-wsTransformador}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/wsTransformador"/>
         </wsimport>

@@ -7,4 +7,8 @@
     <system systemId="http://localhost:8081/PrototipoMemoria/wsTransformador?xsd=3" uri="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8081/PrototipoMemoria/wsTransformador.xsd_3.xsd"/>
     <system systemId="http://localhost:8081/PrototipoMemoria/wsTransformador?xsd=1" uri="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8081/PrototipoMemoria/wsTransformador.xsd_1.xsd"/>
     <system systemId="http://localhost:8081/PrototipoMemoria/wsTransformador?xsd=2" uri="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8081/PrototipoMemoria/wsTransformador.xsd_2.xsd"/>
+    <system systemId="http://localhost:8080/PrototipoMemoria/wsTransformador?wsdl" uri="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8080/PrototipoMemoria/wsTransformador.wsdl"/>
+    <system systemId="http://localhost:8080/PrototipoMemoria/wsTransformador?xsd=1" uri="xml-resources/web-service-references/wsTransformador/wsdl/localhost_8080/PrototipoMemoria/wsTransformador.xsd_1.xsd"/>
+    <system systemId="https://dicc.ucu.edu.uy/PrototipoMemoria/wsTransformador?wsdl" uri="xml-resources/web-service-references/wsTransformador_1/wsdl/dicc.ucu.edu.uy/PrototipoMemoria/wsTransformador.wsdl"/>
+    <system systemId="https://dicc.ucu.edu.uy:443/PrototipoMemoria/wsTransformador?xsd=1" uri="xml-resources/web-service-references/wsTransformador_1/wsdl/dicc.ucu.edu.uy_443/PrototipoMemoria/wsTransformador.xsd_1.xsd"/>
 </catalog>
