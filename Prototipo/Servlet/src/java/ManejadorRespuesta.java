@@ -203,12 +203,13 @@ public class ManejadorRespuesta {
             archivo = archivo + e.ToKml(0);
         }
         archivo = archivo + "</Document> \n </kml>";
-        try{
+        try{	    
             fw = new FileWriter(fileName);
             bw = new BufferedWriter(fw);
             bw.write(archivo);
             bw.close();
             fw.close();
+	    System.out.println("Acabo de escribir el archivo");
             
         }catch(IOException e)
         {
