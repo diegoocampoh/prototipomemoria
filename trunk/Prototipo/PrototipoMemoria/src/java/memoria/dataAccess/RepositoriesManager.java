@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import memoria.dataAccess.dao.ExcelDao;
 import memoria.commons.dataAccess.query.QueryParams;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import memoria.commons.dataAccess.RepoConfig;
@@ -30,6 +31,16 @@ import memoria.dataAccess.dao.ShapeFileDao;
  */
 public class RepositoriesManager {
 
+    //Patron Singleton
+    private static RepositoriesManager instance;
+
+    public static RepositoriesManager getInstance() {
+        if (instance == null) {
+            instance = new RepositoriesManager();
+        }
+        return instance;
+    }
+
     private List<IRepositoryDao> repositories = new ArrayList<IRepositoryDao>();
     private HashMap<String,List<IRepositoryDao>> entitiesLocationMap = new HashMap<String, List<IRepositoryDao>>();
 
@@ -45,14 +56,19 @@ public class RepositoriesManager {
 
     public List<GeoReferenced> getData(VisualQuery params){
         //Voy a buscar en que repositorios encuentro la data
+
+        long startMilis = new Date().getTime();
+
         String capa = params.getCapa();
         List<IRepositoryDao> daos = entitiesLocationMap.get(capa);
-        List<GeoReferenced> results = new ArrayList<GeoReferenced>();
 
+        List<GeoReferenced> results = new ArrayList<GeoReferenced>();
         for (IRepositoryDao iRepositoryDao : daos) {
             results.addAll(iRepositoryDao.getData(params));
-
         }
+
+        long endMilis = new Date().getTime();
+        System.out.println("Tiempo de ejecución en transformador: "+(endMilis - startMilis));
         return results;
     }
 

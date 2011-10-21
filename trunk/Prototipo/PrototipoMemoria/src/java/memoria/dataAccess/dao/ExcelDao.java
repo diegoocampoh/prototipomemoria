@@ -52,7 +52,7 @@ public class ExcelDao implements IRepositoryDao {
 
             for(int i = 1; i <sheet.getRows(); i++){
 
-                EntidadPunto escuela = null;
+                EntidadPunto entidadPunto = null;
                 try {
                     Cell id = sheet.getCell(0, i);
                     Cell lat = sheet.getCell(1, i);
@@ -73,8 +73,8 @@ public class ExcelDao implements IRepositoryDao {
                     LatLonCoordinate coordenadas = new LatLonCoordinate(latlong[0], latlong[1]);
                     //System.out.println(latlong[0]+";"+latlong[1]);
                     Point pi = new Point(Long.parseLong(id.getContents()), coordenadas);
-                    escuela = new EntidadPunto( nombre,  descripcion,pi);
-                    results.add(escuela);
+                    entidadPunto = new EntidadPunto( nombre,  descripcion,pi);
+                    results.add(entidadPunto);
                 } catch (Exception e) {
                    Logger.getLogger(ExcelDao.class.getName()).log(Level.SEVERE, "Error al leer entidad", e);
                 }

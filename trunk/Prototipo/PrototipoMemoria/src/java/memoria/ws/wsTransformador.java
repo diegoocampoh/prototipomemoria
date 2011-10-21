@@ -42,7 +42,7 @@ public class wsTransformador {
         try {
             VisualQuery query = (VisualQuery) xstream.fromXML(params);
 
-            RepositoriesManager repoManager = new RepositoriesManager();
+            RepositoriesManager repoManager = RepositoriesManager.getInstance();
             List<GeoReferenced> results = repoManager.getData(query);
             return xstream.toXML(results);
 
