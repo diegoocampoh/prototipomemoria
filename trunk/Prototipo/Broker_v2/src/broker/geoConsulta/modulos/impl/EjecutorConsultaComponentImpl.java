@@ -35,11 +35,21 @@ public class EjecutorConsultaComponentImpl implements
 			}
 			
 			try {
-				WsTransformadorPortBindingStub cliente = new WsTransformadorPortBindingStub();
-				String vsQueryStr = xstream.toXML(vsQuery);
-				System.out.println("EjecutorConsulta realiza consulta a Transformer: " + vsQueryStr);
-				respuesta = cliente.getData(vsQueryStr);
-				System.out.println("EjecutorConsulta Transformer responde: " + respuesta);
+				
+				WsTransformadorService servicio = new WsTransformadorServiceLocator();
+				WsTransformador puerto = servicio.getwsTransformadorPort();
+				//String vsQueryStr = xstream.toXML(vsQuery);
+				//vsQueryStr = "<memoria.commons.dataAccess.query.VisualQuery><capa>Escuelas</capa></memoria.commons.dataAccess.query.VisualQuery>";
+				//System.out.println("EjecutorConsulta realiza consulta a Transformer: " + vsQueryStr);
+				//respuesta = puerto.getData(vsQueryStr);
+				String capa = "Escuela";
+		        
+		        double SWlat = -34.91;
+		        double SWlon = -56.16;
+		        double NElat = -34.89;
+		        double NElon = -56.12;
+				respuesta = puerto.getDataFiltro(capa,SWlat,SWlon,NElat,NElon);
+				//System.out.println("EjecutorConsulta Transformer responde: " + respuesta);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
@@ -59,9 +69,16 @@ public class EjecutorConsultaComponentImpl implements
 	}
 	
 	public static void main(String[] args) {
-		EjecutorConsultaComponentImpl cons = new EjecutorConsultaComponentImpl();
+		/*EjecutorConsultaComponentImpl cons = new EjecutorConsultaComponentImpl();
 		UserQuery uq = new UserQuery();
 		uq.addCapa("Escuelas");
-		cons.ejecutarConsulta(uq);
+		cons.ejecutarConsulta(uq);*/
+		//System.out.println("Entra a AnalizadorConsultaComponentImp.interpretarConsulta");
+				UserQuery us = new UserQuery();
+				us.addCapa("Escuela");
+				
+				XStream xstream = new XStream(new DomDriver());
+				String r = xstream.toXML(us);
+				System.out.println(r);
 	}
 }
