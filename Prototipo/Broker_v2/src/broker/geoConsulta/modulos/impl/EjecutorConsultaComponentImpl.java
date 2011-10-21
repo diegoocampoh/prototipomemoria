@@ -10,6 +10,7 @@ import java.util.List;
 
 import memoria.commons.dataAccess.query.UserQuery;
 import memoria.commons.dataAccess.query.VisualQuery;
+import memoria.commons.dataAccess.query.filtro.RectangleFilter;
 import memoria.commons.structures.AbstractGeographicElement;
 import memoria.commons.structures.GeoReferenced;
 import broker.geoConsulta.modulos.*;
@@ -38,24 +39,21 @@ public class EjecutorConsultaComponentImpl implements
 				
 				WsTransformadorService servicio = new WsTransformadorServiceLocator();
 				WsTransformador puerto = servicio.getwsTransformadorPort();
-				//String vsQueryStr = xstream.toXML(vsQuery);
-				//vsQueryStr = "<memoria.commons.dataAccess.query.VisualQuery><capa>Escuelas</capa></memoria.commons.dataAccess.query.VisualQuery>";
-				//System.out.println("EjecutorConsulta realiza consulta a Transformer: " + vsQueryStr);
-				//respuesta = puerto.getData(vsQueryStr);
-				String capa = "Escuela";
-		        
-		        double SWlat = -34.91;
-		        double SWlon = -56.16;
-		        double NElat = -34.89;
-		        double NElon = -56.12;
-				respuesta = puerto.getDataFiltro(capa,SWlat,SWlon,NElat,NElon);
-				//System.out.println("EjecutorConsulta Transformer responde: " + respuesta);
+				String vsQueryStr = xstream.toXML(vsQuery);
+				
+				//vsQueryStr=	vsQueryStr.replace("\n", "");
+				//vsQueryStr=	vsQueryStr.trim();
+				//vsQueryStr=	vsQueryStr.replace("<", "&lt;");
+				respuesta = puerto.getData(vsQueryStr);
+				System.out.println("EjecutorConsulta realiza consulta a Transformer: " + vsQueryStr);
+				
 			}catch(Exception e){
 				e.printStackTrace();
 			}
 			
 			List<GeoReferenced> resultado = (List<GeoReferenced>) xstream.fromXML(respuesta);
 			Agregar(resultados, resultado);
+			
 		}
 		return xstream.toXML(resultados);
 	}
@@ -68,17 +66,20 @@ public class EjecutorConsultaComponentImpl implements
 		return resultados;
 	}
 	
+	
+	
 	public static void main(String[] args) {
-		/*EjecutorConsultaComponentImpl cons = new EjecutorConsultaComponentImpl();
+		EjecutorConsultaComponentImpl cons = new EjecutorConsultaComponentImpl();
+		RectangleFilter rf = new RectangleFilter();
 		UserQuery uq = new UserQuery();
-		uq.addCapa("Escuelas");
-		cons.ejecutarConsulta(uq);*/
+		uq.addCapa("Escuela");
+		cons.ejecutarConsulta(uq);
 		//System.out.println("Entra a AnalizadorConsultaComponentImp.interpretarConsulta");
-				UserQuery us = new UserQuery();
+				/*UserQuery us = new UserQuery();
 				us.addCapa("Escuela");
 				
 				XStream xstream = new XStream(new DomDriver());
 				String r = xstream.toXML(us);
-				System.out.println(r);
+				System.out.println(r);*/
 	}
 }
