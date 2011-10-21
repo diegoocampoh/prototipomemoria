@@ -2,7 +2,7 @@
 <memoria.commons.dataAccess.RepositoriesMetadata>
     <entity>Escuela</entity>
     <repositories>
-      <memoria.commons.dataAccess.RepoConfig>
+<!--      <memoria.commons.dataAccess.RepoConfig>
         <attributes>
           <entry>
             <string>URL</string>
@@ -31,7 +31,7 @@
           </entry>
         </attributes>
         <repoDaoClass>memoria.dataAccess.dao.PostgisDao</repoDaoClass>
-      </memoria.commons.dataAccess.RepoConfig>
+      </memoria.commons.dataAccess.RepoConfig>-->
 <!--      <memoria.commons.dataAccess.RepoConfig>
         <attributes>
           <entry>
@@ -50,16 +50,17 @@
         </attributes>
         <repoDaoClass>memoria.dataAccess.dao.ShapeFileDao</repoDaoClass>
       </memoria.commons.dataAccess.RepoConfig>-->
-<!--      <memoria.commons.dataAccess.RepoConfig>
+      <memoria.commons.dataAccess.RepoConfig>
         <attributes>
           <entry>
             <string>URL</string>
-            <string>D:/facu/Memoria/prototipo-googlecode/Prototipo/PrototipoMemoria/src/java/memoria/resources/industri.xls</string>
+            <string>D:/facu/Intro mem/svn/Documentos Memoria de grado/EntregaFinal/datos/datoseducacion/data/EscuelaPublicaOriginalSirgas2000Recortado.xls</string>
           </entry>
         </attributes>
         <repoDaoClass>memoria.dataAccess.dao.ExcelDao</repoDaoClass>
-      </memoria.commons.dataAccess.RepoConfig>
-      <memoria.commons.dataAccess.RepoConfig>
+      </memoria.commons.dataAccess.RepoConfig>      
+      
+ <!--      <memoria.commons.dataAccess.RepoConfig>
         <attributes>
           <entry>
             <string>URL</string>
@@ -70,4 +71,18 @@
       </memoria.commons.dataAccess.RepoConfig>-->
     </repositories>
   </memoria.commons.dataAccess.RepositoriesMetadata>
+<memoria.commons.dataAccess.RepositoriesMetadata>
+    <entity>Industria</entity>
+    <repositories>
+        <memoria.commons.dataAccess.RepoConfig>
+        <attributes>
+          <entry>
+            <string>URL</string>
+            <string>D:/facu/Intro mem/svn/GIS DATA/IMM/industri/industri300.xls</string>
+          </entry>
+        </attributes>
+        <repoDaoClass>memoria.dataAccess.dao.ExcelDao</repoDaoClass>
+      </memoria.commons.dataAccess.RepoConfig>
+    </repositories>
+</memoria.commons.dataAccess.RepositoriesMetadata>
 </list>
