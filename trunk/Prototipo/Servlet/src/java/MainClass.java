@@ -73,13 +73,54 @@ public class MainClass {
          ManejadorRespuesta mR = new ManejadorRespuesta();
          mR.ParsearRespuesta(result);*/
 
+        /* try { // Call Web Service Operation
+             broker.geoconsulta.modulos.ReceptorConsultaComponentService service = new broker.geoconsulta.modulos.ReceptorConsultaComponentService();
+             broker.geoconsulta.modulos.ReceptorConsultaComponent port = service.getReceptorConsultaComponentPort();
+             // TODO initialize WS operation arguments here
+             Coordinate centro = new LatLonCoordinate(-34.916231483608684d,-34.916231483608684d);
+             Coordinate puntaSW  = new LatLonCoordinate (-34.916231483608684d,-56.406866500781234d);
+             Coordinate puntaNE = new LatLonCoordinate(-34.705948282647874d,-55.917974899218734d);
+             String[] capas = new String[1];
+             capas[0] = "Escuelas";
+             Consultador cons = new Consultador();
+             String laCons = cons.generarConsulta(puntaNE, puntaSW, centro, capas);
+
+
+             java.lang.String arg0 = laCons;
+             // TODO process result here
+             java.lang.String result = port.obtenerGeoInfo(arg0);
+             System.out.println("Result = "+result);
+         } catch (Exception ex) {
+             ex.getMessage();
+             ex.printStackTrace();
+         }
+*/
+
+
+         try { // Call Web Service Operation
+         memoria.ws.WsTransformadorService service = new memoria.ws.WsTransformadorService();
+         memoria.ws.WsTransformador port = service.getWsTransformadorPort();
+         // TODO initialize WS operation arguments here
+         java.lang.String capa = "Comisarias";
+         java.lang.Double latSurOesteVisor = Double.valueOf(-34.916231483608684d);
+         java.lang.Double lonSurOesteVisor = Double.valueOf(-56.406866500781234d);
+         java.lang.Double latNorEsteVisor = Double.valueOf(-34.705948282647874d);
+         java.lang.Double lonNorEsteVisor = Double.valueOf(-55.917974899218734d);
+         // TODO process result here
+         java.lang.String result = port.getDataFiltro(capa, latSurOesteVisor, lonSurOesteVisor, latNorEsteVisor, lonNorEsteVisor);
+         System.out.println("Result del Negro = "+result);
+     } catch (Exception ex) {
+         // TODO handle custom exceptions here
+     }
+
+
         // ManejadorRespuesta mR = new ManejadorRespuesta();
          //mR.CommitKML("22");
          Validador val = new Validador();
          //val.EmpezarTest();
          Cronometer cron = new Cronometer();
          //cron.empezarTest();
-         val.EmpezarTest();
+         //val.EmpezarTest();
         //ManejadorRespuesta mR = new ManejadorRespuesta();
          //mR.TestValidar();
          try{
@@ -96,5 +137,8 @@ public class MainClass {
 
         System.out.println("END");
     }
-     
+
+
+
+
 }
