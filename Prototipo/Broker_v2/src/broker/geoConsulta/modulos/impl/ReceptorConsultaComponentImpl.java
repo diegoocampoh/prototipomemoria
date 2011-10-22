@@ -1,8 +1,10 @@
 package broker.geoConsulta.modulos.impl;
 
-import broker.geoConsulta.modulos.*;
+import org.osoa.sca.annotations.Reference;
+import org.osoa.sca.annotations.Service;
 
-import org.osoa.sca.annotations.*;
+import broker.geoConsulta.modulos.AnalizadorConsultaComponent;
+import broker.geoConsulta.modulos.ReceptorConsultaComponent;
 
 @Service(ReceptorConsultaComponent.class)
 public class ReceptorConsultaComponentImpl implements

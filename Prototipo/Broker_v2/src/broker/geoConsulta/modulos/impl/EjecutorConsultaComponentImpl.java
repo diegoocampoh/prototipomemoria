@@ -1,10 +1,6 @@
 package broker.geoConsulta.modulos.impl;
 
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +9,13 @@ import memoria.commons.dataAccess.query.VisualQuery;
 import memoria.commons.dataAccess.query.filtro.RectangleFilter;
 import memoria.commons.structures.AbstractGeographicElement;
 import memoria.commons.structures.GeoReferenced;
-import broker.geoConsulta.modulos.*;
-import memoria.ws.*;
+import memoria.ws.WsTransformador;
+import memoria.ws.WsTransformadorService;
+import memoria.ws.WsTransformadorServiceLocator;
+import broker.geoConsulta.modulos.EjecutorConsultaComponent;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 public class EjecutorConsultaComponentImpl implements
 		EjecutorConsultaComponent{

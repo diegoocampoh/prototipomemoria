@@ -3,8 +3,6 @@ package broker.geoConsulta.modulos;
 import java.io.IOException;
 import org.apache.tuscany.sca.host.embedded.SCADomain;
 
-import broker.geoConsulta.modulos.impl.ReceptorConsultaComponentImpl;
-
 /**
  * Este programa servidor crea un SCA runtime y lo inicializa 
  * lo cual activa el terminal Web service BrokerService.

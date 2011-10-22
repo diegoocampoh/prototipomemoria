@@ -1,14 +1,14 @@
 package broker.geoConsulta.modulos.impl;
 
-import broker.geoConsulta.modulos.*;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-import com.thoughtworks.xstream.XStream;
 import memoria.commons.dataAccess.query.UserQuery;
-import java.rmi.RemoteException;
 
+import org.osoa.sca.annotations.Reference;
 
+import broker.geoConsulta.modulos.AnalizadorConsultaComponent;
+import broker.geoConsulta.modulos.EjecutorConsultaComponent;
 
-import org.osoa.sca.annotations.*;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 public class AnalizadorConsultaComponentImp implements
 		AnalizadorConsultaComponent{
