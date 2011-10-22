@@ -26,7 +26,7 @@ public class ManejadorRespuesta {
      ArrayList<ElemGeograf> listaElementos;
     private Punto convertirAPunto(Point unPoint)
     {
-        Coordenadas lasCoord = new Coordenadas(Double.parseDouble(unPoint.getCoordiante().getX()), Double.parseDouble(unPoint.getCoordiante().getY()));
+        Coordenadas lasCoord = new Coordenadas(Double.parseDouble(unPoint.getCoordiante().getY()), Double.parseDouble(unPoint.getCoordiante().getX()));
         Punto resultPunto = new Punto(lasCoord);
         return resultPunto;
 
@@ -37,7 +37,7 @@ public class ManejadorRespuesta {
         ArrayList<Coordenadas> CoordenadasPoligono = new ArrayList<Coordenadas>();
         for(Point p : puntos)
         {            
-            Coordenadas unaCoord = new Coordenadas(Double.parseDouble(p.getCoordiante().getX()), Double.parseDouble(p.getCoordiante().getY()));
+            Coordenadas unaCoord = new Coordenadas(Double.parseDouble(p.getCoordiante().getY()), Double.parseDouble(p.getCoordiante().getX()));
             CoordenadasPoligono.add(unaCoord);
         }
         Poligono resultado = new Poligono(CoordenadasPoligono);
@@ -49,7 +49,7 @@ public class ManejadorRespuesta {
         ArrayList<Coordenadas> CoordenadasLinea = new ArrayList<Coordenadas>();
         for(Point p: puntos)
         {
-            Coordenadas unaCoord = new Coordenadas(Double.parseDouble(p.getCoordiante().getX()), Double.parseDouble(p.getCoordiante().getY()));
+            Coordenadas unaCoord = new Coordenadas(Double.parseDouble(p.getCoordiante().getY()), Double.parseDouble(p.getCoordiante().getX()));
             CoordenadasLinea.add(unaCoord);
         }
         Linea resultado = new Linea(CoordenadasLinea);
@@ -60,29 +60,29 @@ public class ManejadorRespuesta {
           System.out.println("Entra el xml a ser paresado");
           ArrayList<ElemGeograf> listaParseada = new ArrayList<ElemGeograf>();
           XStream st = new XStream();
-          ArrayList<AbstractGeographicElement> listaDeElementos;
-          listaDeElementos = (ArrayList<AbstractGeographicElement>)st.fromXML(xml);
+          ArrayList<GeoReferenced> listaDeElementos;
+          listaDeElementos = (ArrayList<GeoReferenced>)st.fromXML(xml);
           System.out.println("Fue transformado a objetos exitosamente");
-          for(AbstractGeographicElement a : listaDeElementos)
+          for(GeoReferenced a : listaDeElementos)
           {
-              if(a.getTypeRepresentation().equals("Point"))
+              if(a.getSpatialRepresentation().getTypeRepresentation().equals("Point"))
               {
                   System.out.println("Es un Punto");
-                  Punto unPunto = convertirAPunto((Point)a);
+                  Punto unPunto = convertirAPunto((Point)a.getSpatialRepresentation());
                   listaParseada.add(unPunto);
               }else
-                  if(a.getTypeRepresentation().equals("Polygon"))
+                  if(a.getSpatialRepresentation().getTypeRepresentation().equals("Polygon"))
                   {
                       System.out.println("Es un Poligono");
-                      Poligono unPoligono = convertirAPoligono((Polygon)a);
+                      Poligono unPoligono = convertirAPoligono((Polygon)a.getSpatialRepresentation());
                       listaParseada.add(unPoligono);
                   }
                   else
                   {
-                    if(a.getTypeRepresentation().equals("Line"))
+                    if(a.getSpatialRepresentation().getTypeRepresentation().equals("Line"))
                     {
                         System.out.println("Es una linea");
-                        Linea unaLinea =  convertirALinea((Line) a);
+                        Linea unaLinea =  convertirALinea((Line) a.getSpatialRepresentation());
                         listaParseada.add(unaLinea);
                     }
                   }
@@ -93,6 +93,33 @@ public class ManejadorRespuesta {
 
 
 
+    }
+
+    public void ConcetarWSDatos(Coordinate esqNE, Coordinate esqSW, String strcapa)
+    {
+        try { // Call Web Service Operation
+         memoria.ws.WsTransformadorService service = new memoria.ws.WsTransformadorService();
+         memoria.ws.WsTransformador port = service.getWsTransformadorPort();
+
+         LatLonCoordinate NE = (LatLonCoordinate)esqNE;
+         LatLonCoordinate SW = (LatLonCoordinate)esqSW;
+         // TODO initialize WS operation arguments here
+         java.lang.String capa = strcapa;
+         java.lang.Double latSurOesteVisor = SW.getLatitude();//Double.valueOf(-34.916231483608684d);
+         java.lang.Double lonSurOesteVisor = SW.getLongitude();//Double.valueOf(-56.406866500781234d);
+         java.lang.Double latNorEsteVisor = NE.getLatitude();//Double.valueOf(-34.705948282647874d);
+         java.lang.Double lonNorEsteVisor = NE.getLongitude();//Double.valueOf(-55.917974899218734d);
+         // TODO process result here
+         java.lang.String result = port.getDataFiltro(capa, latSurOesteVisor, lonSurOesteVisor, latNorEsteVisor, lonNorEsteVisor);
+         //System.out.println("Result del Negro = "+result);
+         this.listaElementos = ParsearRespuesta(result);
+         System.out.println("va a llamar generar kml");
+         this.generarArchivoKML();
+
+     } catch (Exception ex) {
+         System.out.print(ex.getMessage());
+         ex.printStackTrace();
+     }
     }
 
     public void RecibirXML()
@@ -148,6 +175,7 @@ public class ManejadorRespuesta {
          lista.add(pol1);
          String result = st.toXML(lista);
          this.listaElementos = ParsearRespuesta(result);
+
          this.generarArchivoKML();
 
     }
@@ -155,7 +183,7 @@ public class ManejadorRespuesta {
     {
         //C:\Program Files\SlikSvn\bin
         //String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Test01.kml C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\KMLFB.kml";
-        String fileName = "/var/www/html/kml/Resultado.kml";
+        String fileName = "/var/www/html/kml/Resultado.kml";//"C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\Fuego.kml";//
         FileWriter fw;
         BufferedWriter bw;
         String archivo = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n <kml xmlns=\"http://www.opengis.net/kml/2.2\"> \n <Document>\n";
