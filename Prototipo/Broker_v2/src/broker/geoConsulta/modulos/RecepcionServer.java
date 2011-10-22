@@ -1,6 +1,7 @@
 package broker.geoConsulta.modulos;
 
-import java.io.IOException;
+import java.util.Scanner;
+
 import org.apache.tuscany.sca.host.embedded.SCADomain;
 
 /**
@@ -13,9 +14,17 @@ public class RecepcionServer {
 		SCADomain scaDomain = SCADomain.newInstance("recepcionConsultas_v2.composite");
 		try {
             System.out.println("Servidor de recepcion de Consultas inicializado (presione Enter para detenerlo)");
-            System.in.read();
+            boolean salir = false;
+            while(!salir){            	
+            	Scanner sc = new Scanner(System.in);
+            	Thread.sleep(10000);
+            	if (sc.hasNext()){
+            		salir = true;            		
+            	}
+            }
+            
 			
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
