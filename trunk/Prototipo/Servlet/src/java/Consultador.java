@@ -23,16 +23,16 @@ import memoria.commons.structures.coordinates.Coordinate;
  */
 public class Consultador {
 
-    public void generarConsulta(Coordinate esqNE, Coordinate esqSW, Coordinate centro, String[] capas)
+    public String generarConsulta(Coordinate esqNE, Coordinate esqSW, Coordinate centro, String[] capas)
     {
         try
         {
             System.out.println("Llego la consulta");
-        for (int i = 0 ; i < capas.length ; i= i +1)
-        {
-            System.out.println("Las capas "+capas[i]);
-        }
-        XStream st = new XStream();
+            for (int i = 0 ; i < capas.length ; i= i +1)
+            {
+                System.out.println("Las capas "+capas[i]);
+            }
+            XStream st = new XStream();
         //st.alias("WMSConsult", WMSConsult.class);
 
 
@@ -74,23 +74,27 @@ public class Consultador {
         FileWriter fw;
         BufferedWriter bw;
 
-        try{
+        //try{
             fw = new FileWriter(fileName);
             bw = new BufferedWriter(fw);
             bw.write(xml);
             bw.close();
             fw.close();
             ManejadorRespuesta man = new ManejadorRespuesta();
-            man.RecibirXML();
+            man.ConcetarWSDatos(esqNE, esqSW, "Comisarias");
+            
+            //man.RecibirXML();
+             return xml;
 
-        }catch(IOException e)
-        {
-            e.printStackTrace();
-        }
+        //}catch(IOException e)
+        //{
+          ///  e.printStackTrace();
+        //}
 
         }catch(Exception e)
         {
             System.out.println(e.getMessage());
+            return null;
         }
         
 
