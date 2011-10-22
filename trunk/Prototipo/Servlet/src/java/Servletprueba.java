@@ -41,9 +41,13 @@ public class Servletprueba extends HttpServlet {
         //System.out.println("Vino por aca6" + (String)request.getParameter("id_lng_ne"));
         //System.out.println("A ver los checkBox "+ request.getParameter("Escuelas"));
 
-        Coordinate centro = new LatLonCoordinate((String)request.getParameter("id_lat"), (String)request.getParameter("id_lng") );
-        Coordinate puntaSW  = new LatLonCoordinate ((String)request.getParameter("id_lat_sw"),(String)request.getParameter("id_lng_sw"));
-        Coordinate puntaNE = new LatLonCoordinate((String)request.getParameter("id_lat_ne"),(String)request.getParameter("id_lng_ne"));
+       // Coordinate centro = new LatLonCoordinate((String)request.getParameter("id_lat"), (String)request.getParameter("id_lng") );
+        //Coordinate puntaSW  = new LatLonCoordinate ((String)request.getParameter("id_lat_sw"),(String)request.getParameter("id_lng_sw"));
+        //Coordinate puntaNE = new LatLonCoordinate((String)request.getParameter("id_lat_ne"),(String)request.getParameter("id_lng_ne"));
+
+        Coordinate centro = new LatLonCoordinate(-34.81115696,-56.162420699999984 );
+        Coordinate puntaSW  = new LatLonCoordinate (-35.02117167160318,-56.651312301562484);
+        Coordinate puntaNE = new LatLonCoordinate(-34.60060563546345,-55.673529098437484);
 
         String[] capas = new String[cantidadCapas];
         int tope = 0;
