@@ -151,45 +151,6 @@ public class ManejadorRespuesta {
          this.generarArchivoKML();
 
     }
-
-    private void TestLlenarArray()
-    {
-        Coordenadas c1 = new Coordenadas(-36.123,-56.312);
-        Coordenadas c10 = new Coordenadas(-32.5675123,-57.8888432);
-        Coordenadas c11 = new Coordenadas(-33.765123,-57.4999932);
-        Coordenadas c12 = new Coordenadas(-31.14623,-57.47772);
-
-        ArrayList<Coordenadas> array1 = new ArrayList<Coordenadas>();
-        array1.add(c1);
-        array1.add(c10);
-        array1.add(c11);
-        array1.add(c12);
-
-        Linea l1 = new Linea(array1);
-
-        Coordenadas c2 = new Coordenadas(-36.123,-56.312);
-        Coordenadas c20 = new Coordenadas(-34.123,-57.232);
-        Coordenadas c21 = new Coordenadas(-33.123,-58.432);
-        Coordenadas c22 = new Coordenadas(-36.123,-56.312);
-
-        ArrayList<Coordenadas> array2 = new ArrayList<Coordenadas>();
-        array2.add(c2);
-        array2.add(c20);
-        array2.add(c21);
-        array2.add(c22);
-
-        Coordenadas c3 = new Coordenadas(-37.123, -56.312);
-        Punto po1 = new Punto(c3);
-
-        Poligono p1 = new Poligono (array2);
-
-
-        this.listaElementos = new ArrayList<ElemGeograf>();
-        this.listaElementos.add(l1);
-        this.listaElementos.add(p1);
-        this.listaElementos.add(po1);
-
-    }
     public void generarArchivoKML ()
     {
         //C:\Program Files\SlikSvn\bin
@@ -220,46 +181,7 @@ public class ManejadorRespuesta {
 
        
     }
-    public void CommitKML(String rutaArchivo)
-    {try
-     {
-         System.out.println("Empieza el commit");
-         Process p2;
-         //try {
-                //p2= Runtime.getRuntime().exec("C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs");
-                //int val1 = p2.waitFor();
-                //System.out.println("error" + val1);
-           // } catch (InterruptedException ex) {
-             //   Logger.getLogger(ManejadorRespuesta.class.getName()).log(Level.SEVERE, null, ex);
-            //}
-
-         p2 = Runtime.getRuntime().exec("svn add Arch01.kml");
-
-         System.out.println("Pasa el primero");
-
-         System.out.println("No termina");
-         int exitVal;
-            try {
-
-                int a = p2.waitFor();
-                System.out.println("Termina con valorr "+ a);
-                p2 = Runtime.getRuntime().exec("svn commit Arch01.kml -m\" Last \"");
-                System.out.println("No termina");
-                exitVal = p2.waitFor();
-                System.out.println("Termina con error " + exitVal);
-            } catch (InterruptedException ex) {
-                System.out.println("ERRRRORRRR");
-                Logger.getLogger(ManejadorRespuesta.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-//No puedo ejecutarlo
-     }catch(IOException e)
-     {
-            System.out.println("Exception "+e.getMessage());
-     }
-
-
-    }
+    
 
 
 
