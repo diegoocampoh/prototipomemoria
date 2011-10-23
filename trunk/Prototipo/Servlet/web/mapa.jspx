@@ -50,7 +50,7 @@
                 };
                 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
                 //ACA HAY QUE PONER LA URL DEL ARCHIVO KML http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/KMLFB.km
-                var elKAMELE = new google.maps.KmlLayer('https://dicc.ucu.edu.uy/kml/Resultado.kml');//'http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/Fuego.kml'
+                var elKAMELE = new google.maps.KmlLayer('https://dicc.ucu.edu.uy/kml/Resultado.kml');//'http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/Fuego2.kml');//'https://dicc.ucu.edu.uy/kml/Resultado.kml');//'http://prototipomemoria.googlecode.com/svn/trunk/Prototipo/KMLs/Fuego.kml'
                 elKAMELE.setMap(map);
 
               
