@@ -41,7 +41,7 @@ public class Cronometer {
            long a =  System.currentTimeMillis();
            //System.out.println("Empieza "+ a);
            List<ElemGeograf> listaElementos = this.ParsearRespuesta(result);
-           this.generarArchivoKML(2,listaElementos);
+           this.generarArchivoKML(i,listaElementos);
            long b = System.currentTimeMillis();
            //System.out.println("Termina "+b);
            System.out.println("Test "+i+" duro "+(b-a) + " milisegundos");
@@ -49,22 +49,27 @@ public class Cronometer {
         }
         //cargar resultados de la consulta aleatoriamente
         System.out.println("Total "+poblacion);
-        double media;
         //calcular media
+
+        double media;
         double sumatoriaM = 0;
         for(int i = 0 ; i < poblacion ; i = i+1)
         {
             sumatoriaM = sumatoriaM + tiempos.get(i);
         }
         media = (1.0/poblacion) * sumatoriaM;
-        double desviacion;
+
+
         //calcular desviacion;
+        double desviacion;
         double sumatoriaD = 0;
         for(int  i = 0 ; i < poblacion ; i = i + 1)
         {
             sumatoriaD = sumatoriaD + Math.pow((tiempos.get(i) - media),2);
         }
         desviacion = Math.sqrt(sumatoriaD/poblacion);
+
+
         System.out.println("Media "+media+" desviacion "+desviacion);
     }
 
