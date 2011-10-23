@@ -53,7 +53,7 @@ public class Consultador {
         //String NombreArchivo = "ArchivoKML.kml";
          *
          */
-        String fileName = "C:\\Users\\Fran\\Consulta.txt";
+        //String fileName = "C:\\Users\\Fran\\Consulta.txt";
         List<String> lasCapas = new ArrayList<String>();
         for(String c : capas)
         {
@@ -71,15 +71,15 @@ public class Consultador {
         UserQuery UQ = new UserQuery(lasCapas, rf);
         String xml = st.toXML(UQ);
 
-        FileWriter fw;
-        BufferedWriter bw;
+        //FileWriter fw;
+        //BufferedWriter bw;
 
         //try{
-            fw = new FileWriter(fileName);
-            bw = new BufferedWriter(fw);
-            bw.write(xml);
-            bw.close();
-            fw.close();
+          //  fw = new FileWriter(fileName);
+           // bw = new BufferedWriter(fw);
+            //bw.write(xml);
+            //bw.close();
+            //fw.close();
             ManejadorRespuesta man = new ManejadorRespuesta();
             man.ConcetarWSDatos(esqNE, esqSW, "Comisarias");
             
