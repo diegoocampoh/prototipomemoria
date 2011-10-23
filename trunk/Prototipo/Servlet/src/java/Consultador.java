@@ -27,7 +27,7 @@ public class Consultador {
     {
         try
         {
-            System.out.println("Llego la consulta");
+            System.out.println("Esta generando la consulta");
             for (int i = 0 ; i < capas.length ; i= i +1)
             {
                 System.out.println("Las capas "+capas[i]);
@@ -64,8 +64,6 @@ public class Consultador {
         NE.setCoordiante(esqNE);
         Point SW = new Point();
         SW.setCoordiante(esqSW);
-
-
         rf.setNorthEast(NE);
         rf.setSouthWest(SW);
         UserQuery UQ = new UserQuery(lasCapas, rf);
@@ -80,6 +78,7 @@ public class Consultador {
             //bw.write(xml);
             //bw.close();
             //fw.close();
+            System.out.println("va a llamar al conectar WS");
             ManejadorRespuesta man = new ManejadorRespuesta();
             man.ConcetarWSDatos(esqNE, esqSW, "Comisarias");
             
