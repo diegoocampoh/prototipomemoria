@@ -88,7 +88,7 @@ public class ManejadorRespuesta {
                   }
                   
           }
-          System.out.println("Termina exitosamente");
+          System.out.println("Termina exitosamente el parseo de la respuesta");
           return listaParseada;
 
 
@@ -98,6 +98,7 @@ public class ManejadorRespuesta {
     public void ConcetarWSDatos(Coordinate esqNE, Coordinate esqSW, String strcapa)
     {
         try { // Call Web Service Operation
+            System.out.println("Esta conectandose con el web service");
          memoria.ws.WsTransformadorService service = new memoria.ws.WsTransformadorService();
          memoria.ws.WsTransformador port = service.getWsTransformadorPort();
 
@@ -112,8 +113,9 @@ public class ManejadorRespuesta {
          // TODO process result here
          java.lang.String result = port.getDataFiltro(capa, latSurOesteVisor, lonSurOesteVisor, latNorEsteVisor, lonNorEsteVisor);
          //System.out.println("Result del Negro = "+result);
+         System.out.println("Obtuvo el resultado del webservice : "+result);
          this.listaElementos = ParsearRespuesta(result);
-         System.out.println("va a llamar generar kml");
+         
          this.generarArchivoKML();
 
      } catch (Exception ex) {
@@ -183,7 +185,8 @@ public class ManejadorRespuesta {
     {
         //C:\Program Files\SlikSvn\bin
         //String fileName = "C:\\Users\\Fran\\Desktop\\Validaciones\\Test01.kml C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\KMLFB.kml";
-        String fileName = "/var/www/html/kml/Resultado.kml";//"C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\Fuego2.kml";//
+        System.out.println("Empieza a generar el KML");
+        String fileName = "/var/www/html/kml/Resultado.kml";//"C:\\Users\\Fran\\prototipomemoria\\Prototipo\\KMLs\\Fuego3.kml";//
         FileWriter fw;
         BufferedWriter bw;
         String archivo = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n <kml xmlns=\"http://www.opengis.net/kml/2.2\"> \n <Document>\n";
@@ -198,13 +201,13 @@ public class ManejadorRespuesta {
             bw.write(archivo);
             bw.close();
             fw.close();
-	    System.out.println("Acabo de escribir el archivo");
+	    System.out.println("Se escribe el kml exitosamente");
             
         }catch(IOException e)
         {
             e.printStackTrace();
         }
-        System.out.println("llamo aca a lo que quiero llamar");
+       // System.out.println("llamo aca a lo que quiero llamar");
         
 
        
