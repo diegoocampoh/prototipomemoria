@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Validador de la Memoria de Franklin</title>
+<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+
+/**
+ * Estos son los datos (o los puntos) que se muestran
+ */
+var datosMarkers = [
+['1', -34.9076176308619, -56.2108833928569],
+['2', -34.9091463582541, -56.189797961465],
+['3', -34.902072480964, -56.1898905897867],
+['4', -34.893391896412, -56.1770443790436],
+['5', -34.9067022818552, -56.1698559416807],
+['6', -34.8864939736956, -56.1915795849116],
+['7', -34.8643752477568, -56.2088400966317],
+['8', -34.842474885017, -56.2084413941446],
+['9', -34.8938919563232, -56.1531962174975],
+['10', -34.9070689417253, -56.1501383436793],
+['11', -34.893772052941,  -56.1115126950238],
+['12', -34.8546372906647, -56.1968320542949],
+['13', -34.8695923112669, -56.1714750015559],
+['14', -34.8831542264783, -56.0898580643667],
+['15', -34.8755829847927, -56.1412284298246],
+['16', -34.8507433854871, -56.1437734149929],
+['17', -34.7951566970967, -56.1640550543778],
+['18', -34.8000649110918, -56.0857163432116],
+['19', -34.8577594292786, -56.2256302197846],
+['20', -34.7895328089479, -56.3532982105572],
+['21', -34.8046584018717, -56.2212584236229],
+['22', -34.7990295904935, -56.2566066336919],
+['23', -34.8242821804401, -56.2972010426787],
+['24', -34.8872343041937, -56.2528570388232],
+['25', -34.8646690651676, -56.1540180865859],
+['26', -34.8255182178453, -56.2036160641542],
+['27', -34.9074891094488, -56.1796730488755],
+['28', -34.9069929392124, -56.19185882366]
+];
+
+
+function inicializar() {
+  var opciones = {
+    zoom: 10,
+    center: new google.maps.LatLng(-34.911427, -56.159062),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById("map_canvas"), opciones);
+  cargarMarkers(map, datosMarkers);
+}
+
+
+function cargarMarkers(map, ubicaciones) {
+  for (var i = 0; i < ubicaciones.length; i++) {
+    var dato = ubicaciones[i];
+    var ubicacion = new google.maps.LatLng(dato[1], dato[2]);
+    var marker = new google.maps.Marker({
+        position: ubicacion,
+        map: map,
+		icon: 'http://maps.google.com/mapfiles/kml/pal2/icon8.png',
+        title: dato[0]
+    });
+  }
+}
+</script>
+</head>
+<body onload="inicializar()">
+  <div id="map_canvas"></div>
+</body>
+</html> 
