@@ -32,6 +32,7 @@ public class Servletprueba extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         int cantidadCapas = 3;
+        System.out.println("Entro a procesar el Servlet");
         //System.out.println("Vino por aca" +  (String)request.getParameter("testo"));
         //System.out.println("Vino por aca1" + (String)request.getParameter("id_lat"));
         //System.out.println("Vino por aca2" + (String)request.getParameter("id_lng"));
@@ -68,10 +69,9 @@ public class Servletprueba extends HttpServlet {
         }
 
         Consultador  cons = new Consultador();
-        System.out.println("LLega");
         cons.generarConsulta(puntaNE, puntaSW, centro, capas);
 
-
+        System.out.println("Se termino el procesamiento. hay que llamar a mapa.jspx nada mas");
 
 
 
@@ -86,19 +86,19 @@ public class Servletprueba extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
 
-        if (request.getSession().getAttribute("parametro") == null){
+       // if (request.getSession().getAttribute("parametro") == null){
             //Reenvío
             request.getSession().setAttribute("parametro", new Date());
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/mapa.jspx");
             dispatcher.forward(request, response);
-        } else {
+        //} else {
             PrintWriter o = response.getWriter();
             try {
                 o.println("Acá mostramos los datos");
             } finally {
                 o.close();
             }
-        }
+       // }
         
     } 
 
